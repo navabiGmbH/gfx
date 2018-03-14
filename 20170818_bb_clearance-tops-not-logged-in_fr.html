@@ -1,0 +1,189 @@
+<style>
+    .segmentBanner.is-desktop-none,
+    .allVisitorsBanner.is-desktop-none,
+    .newVisitBanner.is-desktop-none {
+        display: none;
+    }
+
+    .segmentBanner,
+    .allVisitorsBanner,
+    .newVisitBanner {
+        margin: 20px auto 0;
+    }
+
+    @media (max-width: 768px) {
+        .segmentBanner,
+        .allVisitorsBanner,
+        .newVisitBanner {
+            margin: 0 auto 16px;
+        }
+    }
+    
+    .page-BAG .segmentBanner {
+        
+        display: block;
+        
+    }
+    
+    .escape-header-banner__wrapper {
+        position: relative;
+    }
+
+    .header-banner--login {
+        border: 0;
+        border-top: 5px solid #d78f1b;
+        border-bottom: 5px solid #d78f1b;    
+        padding: 9px 34px 0px 42px;
+        font-family: "font sans serif black",Arial,sans-serif;
+        color: #000000;
+        font-size: 18px;
+        line-height: 35px;
+        width: 100%;
+        margin: 0 auto;
+        height: 64px;	
+        box-sizing: border-box;
+    }
+    
+    .header-banner__close {
+        font-family: "font sans serif normal", Arial, sans-serif;
+        position: absolute;
+        right: 8px;
+        top: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 0 !important;
+    }
+    
+    .header-banner--closed {
+        display: none;
+    }
+    
+    
+    .header-banner--login strong {
+        color: #d78f1b;
+    }
+    
+    .header-banner--login i {
+        color: #f06061;
+        text-transform: uppercase;
+        font-style: normal;
+    }
+    
+    .header-banner--login-cta {
+        color: #fff;
+        padding: 5px 10px;
+        background: #000000;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 21px;
+        padding: 7px 15px;
+        float: right;
+    }
+
+    .header-banner--login .banner-gt {
+        display: none;
+    }
+    
+    .header-banner--login a:hover {
+        text-decoration: none;
+    }
+    
+    .nvspo .header-banner--login-cta {
+        margin: 0 1% 0 0 !important;
+    }
+    
+    @media screen and (max-width: 991px) {  
+        .header-banner--login strong {
+            width: inherit;
+            line-height: inherit;
+            display: inherit;
+            float: inherit;
+            margin-left: inherit;
+        }
+        
+        .header-banner__close {
+            padding: 0 !important;
+            top: 2px;
+            font-size: 18px !important;
+            right: 4px;
+        }
+        
+        .page-BAG .header-banner--login-cta {
+            display: none;
+        }
+
+        .page-BAG .header-banner--login .banner-gt {
+            display: inline;
+            color: #000000;
+        }
+        
+        .page-BAG .header-banner--login {
+            padding: 0;
+            line-height: 44px;
+            
+        }
+        
+        .header-banner--login {
+            padding: 4px 75px;
+            border-top: 4px solid #d78f1b;
+            border-bottom: 4px solid #d78f1b;    
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        .header-banner__close.header-banner__close.header-banner__close {
+            top: 5px;
+            right: 16px;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .page-BAG .header-banner--login {
+            margin-top: 60px;
+            margin-bottom: -45px;
+            line-height: 18px;
+            padding: 5px 5%;
+            text-align: center;
+            height: inherit;
+        }
+        
+        .header-banner--login.header-banner--login.header-banner--login {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding: 5px 13% !important;
+            line-height: 19px;
+        }
+    }
+</style>
+
+
+<div class="container escape-header-banner__wrapper">
+
+<div class="row">
+
+    <div class="header-banner--login js-header-banner">
+        <span class="header-banner__close js-header-banner-close">&times;</span>
+
+        <a href="/customer/login.html" onclick="var that = this;_gaq.push(['_set', 'hitCallback', function() { document.location.href = that.href}]);_gaq.push(['_trackEvent', '{ga_country}/banner', '{ga_country}/bodenbanner', '{ga_country}/clearance-mysale-login', 2]);return !(window._gat && window._gat.w);">
+
+            Connectez-vous pour bénéficier de <strong>remises supplémentaires</strong> sur les <strong>hauts</strong><span class="banner-gt"><strong>&nbsp;&gt;</strong></span>
+
+                <span class="header-banner--login-cta">JE ME CONNECTE&nbsp;&gt;</span>
+
+        </a>
+
+    </div>
+
+</div>
+<script>
+    $('.js-header-banner-close').click(function() {
+        $('.js-header-banner').addClass('header-banner--closed')
+    })
+
+</script>
+
+</div>
+
+
+<div class="u-clearfix"></div>
