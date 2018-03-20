@@ -8,13 +8,20 @@
         height: xxx;
     }
 
-    .segmentBanner, .allVisitorsBanner, .newVisitBanner {
-        margin: 20px auto 0;
+    .bannerWrapper {
+        margin: 16px auto 0;
     }
+
     @media (max-width: 768px) {
-        .segmentBanner, .allVisitorsBanner, .newVisitBanner {
+        .bannerWrapper {
             margin: 0 auto 16px;
         }
+    }
+
+    .segmentBanner,
+    .allVisitorsBanner,
+    .newVisitBanner {
+        margin: 0 auto;
     }
 
     .o-shop-by-size-banner {
@@ -146,12 +153,14 @@
     }
 </style>
 
-<div class="o-shop-by-size-banner" style="background-color: #a37a80">
-    <div class="o-shop-by-size-banner__text"><slug>– Bis Freitag –</slug>
-        <strong>-20 % auf Urlaubs-Must-Haves</strong><subline>Geben Sie einfach den Code* <u>HOLIDAY</u> ein.</subline> 
+<div class="bannerWrapper">
+    <div class="o-shop-by-size-banner" style="background-color: #a37a80">
+        <div class="o-shop-by-size-banner__text"><slug>– Bis Freitag –</slug>
+            <strong>-20 % auf Urlaubs-Must-Haves</strong><subline>Geben Sie einfach den Code* <u>HOLIDAY</u> ein.</subline> 
+        </div>
     </div>
-</div>
-<div class="o-shop-by-size-banner__info">
-    *Gültig bis zum 09.03.2018, 23:59 Uhr, und nur für die Artikel auf dieser und den folgenden Seiten. Nicht mit anderen Gutschein-Codes kombinierbar.
+    <div class="o-shop-by-size-banner__info">
+        *Gültig bis zum 09.03.2018, 23:59 Uhr, und nur für die Artikel auf dieser und den folgenden Seiten. Nicht mit anderen Gutschein-Codes kombinierbar.
+    </div>            
 </div>
 

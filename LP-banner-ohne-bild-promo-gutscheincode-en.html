@@ -8,13 +8,20 @@
         height: xxx;
     }
 
-    .segmentBanner, .allVisitorsBanner, .newVisitBanner {
-        margin: 20px auto 0;
+    .bannerWrapper {
+        margin: 16px auto 0;
     }
+
     @media (max-width: 768px) {
-        .segmentBanner, .allVisitorsBanner, .newVisitBanner {
+        .bannerWrapper {
             margin: 0 auto 16px;
         }
+    }
+
+    .segmentBanner,
+    .allVisitorsBanner,
+    .newVisitBanner {
+        margin: 0 auto;
     }
 
     .o-shop-by-size-banner {
@@ -146,13 +153,14 @@
     }
 </style>
 
-<div class="o-shop-by-size-banner" style="background-color: #c5607b">
-    <div class="o-shop-by-size-banner__text"><slug>– Ends Friday –</slug>
-        <strong>Shop 20% off in our Holiday Shop</strong><subline>Use the code* <u>HOLIDAY</u></subline> 
+<div class="bannerWrapper">
+    <div class="o-shop-by-size-banner" style="background-color: #c5607b">
+        <div class="o-shop-by-size-banner__text"><slug>– Ends Friday –</slug>
+            <strong>Shop 20% off in our Holiday Shop</strong><subline>Use the code* <u>HOLIDAY</u></subline> 
+        </div>
+    </div>
+
+    <div class="o-shop-by-size-banner__info">
+        *This offer expires at 23:59 (GMT) on 09.03.2018 and applies to items on this page and the following pages. Voucher code cannot be used in conjunction with any other voucher codes.
     </div>
 </div>
-
-<div class="o-shop-by-size-banner__info">
-    *This offer expires at 23:59 (GMT) on 09.03.2018 and applies to items on this page and the following pages. Voucher code cannot be used in conjunction with any other voucher codes.
-</div>
-

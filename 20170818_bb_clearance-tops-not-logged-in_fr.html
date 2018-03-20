@@ -5,18 +5,20 @@
         display: none;
     }
 
-    .segmentBanner,
-    .allVisitorsBanner,
-    .newVisitBanner {
-        margin: 20px auto 0;
+    .bannerWrapper {
+        margin: 16px auto 0;
     }
 
     @media (max-width: 768px) {
-        .segmentBanner,
-        .allVisitorsBanner,
-        .newVisitBanner {
+        .bannerWrapper {
             margin: 0 auto 16px;
         }
+    }
+
+    .segmentBanner,
+    .allVisitorsBanner,
+    .newVisitBanner {
+        margin: 0 auto;
     }
     
     .page-BAG .segmentBanner {
@@ -126,6 +128,7 @@
         
         .header-banner--login {
             padding: 4px 75px;
+            line-height: 25px;
             border-top: 4px solid #d78f1b;
             border-bottom: 4px solid #d78f1b;    
         }
@@ -151,38 +154,28 @@
         .header-banner--login.header-banner--login.header-banner--login {
             margin-top: 0 !important;
             margin-bottom: 0 !important;
-            padding: 5px 13% !important;
-            line-height: 19px;
+            padding: 5px 40px !important;
+            line-height: 22px;
         }
     }
 </style>
 
 
-<div class="container escape-header-banner__wrapper">
-
-<div class="row">
-
-    <div class="header-banner--login js-header-banner">
-        <span class="header-banner__close js-header-banner-close">&times;</span>
-
-        <a href="/customer/login.html" onclick="var that = this;_gaq.push(['_set', 'hitCallback', function() { document.location.href = that.href}]);_gaq.push(['_trackEvent', '{ga_country}/banner', '{ga_country}/bodenbanner', '{ga_country}/clearance-mysale-login', 2]);return !(window._gat && window._gat.w);">
-
-            Connectez-vous pour bénéficier de <strong>remises supplémentaires</strong> sur les <strong>hauts</strong><span class="banner-gt"><strong>&nbsp;&gt;</strong></span>
-
+<div class="container escape-header-banner__wrapper bannerWrapper js-header-banner">
+    <div class="row">
+        <div class="header-banner--login">
+            <span class="header-banner__close js-header-banner-close">&times;</span>
+            <a href="/customer/login.html" onclick="var that = this;_gaq.push(['_set', 'hitCallback', function() { document.location.href = that.href}]);_gaq.push(['_trackEvent', '{ga_country}/banner', '{ga_country}/bodenbanner', '{ga_country}/clearance-mysale-login', 2]);return !(window._gat && window._gat.w);">
+                Connectez-vous pour bénéficier de <strong>remises supplémentaires</strong> sur les <strong>hauts</strong><span class="banner-gt"><strong>&nbsp;&gt;</strong></span>
                 <span class="header-banner--login-cta">JE ME CONNECTE&nbsp;&gt;</span>
-
-        </a>
-
+            </a>
+        </div>
     </div>
-
-</div>
-<script>
-    $('.js-header-banner-close').click(function() {
-        $('.js-header-banner').addClass('header-banner--closed')
-    })
-
-</script>
-
+    <script>
+        $('.js-header-banner-close').click(function() {
+            $('.js-header-banner').addClass('header-banner--closed')
+        })
+    </script>
 </div>
 
 

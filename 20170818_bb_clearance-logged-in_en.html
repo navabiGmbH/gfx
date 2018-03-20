@@ -1,16 +1,18 @@
 <style>
-    .segmentBanner,
-    .allVisitorsBanner,
-    .newVisitBanner {
-        margin: 20px auto 0;
+    .bannerWrapper {
+        margin: 16px auto 0;
     }
 
     @media (max-width: 768px) {
-        .segmentBanner,
-        .allVisitorsBanner,
-        .newVisitBanner {
+        .bannerWrapper {
             margin: 0 auto 16px;
         }
+    }
+
+    .segmentBanner,
+    .allVisitorsBanner,
+    .newVisitBanner {
+        margin: 0 auto;
     }
 
     .escape-header-banner__wrapper {
@@ -23,7 +25,7 @@
         font-family: "font sans serif normal",Arial,sans-serif;
         color: #000000;
         font-size: 16px;
-        line-height: 16px;
+        line-height: 21px;
         width: 100%;
         margin: 0 auto;
         box-sizing: border-box;
@@ -68,7 +70,7 @@
         }
         
         .nvspo [class*="header-banner-"] {
-            padding: 4px 115px;
+            padding: 8px 115px;
         }
         
     }
@@ -93,27 +95,20 @@
 
 
 
-<div class="container escape-header-banner__wrapper">
-
-<div class="row">
-    
-    <div class="header-banner--exclusive js-header-banner">
-        
-        <span class="header-banner__close js-header-banner-close">&times;</span>
-        
-        <a href="/sonderangebote.html">You are now logged in and able to view your personal <strong><i>MY SALE</i></strong> prices with an extra 15% off selected tops</a>
-        
+<div class="container escape-header-banner__wrapper bannerWrapper js-header-banner">
+    <div class="row">
+        <div class="header-banner--exclusive">
+            <span class="header-banner__close js-header-banner-close">&times;</span>
+            <a href="/sonderangebote.html">You are now logged in and able to view your personal <strong><i>MY SALE</i></strong> prices with an extra 15% off selected tops</a>
+        </div>
     </div>
-    
-</div>
 
-<script>
-    $('.js-header-banner-close').click(function() {
-        $('.js-header-banner').addClass('header-banner--closed')
-    })
-    
-</script>
-
+    <script>
+        $('.js-header-banner-close').click(function() {
+            $('.js-header-banner').addClass('header-banner--closed')
+        })
+        
+    </script>
 </div>
 
 <div class="u-clearfix"></div>

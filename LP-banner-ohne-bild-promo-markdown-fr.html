@@ -7,13 +7,20 @@
     text-align: xxx;
     height: xxx;
 }
-.segmentBanner, .allVisitorsBanner, .newVisitBanner {
-    margin: 20px auto 0;
+.bannerWrapper {
+    margin: 16px auto 0;
 }
+
 @media (max-width: 768px) {
-    .segmentBanner, .allVisitorsBanner, .newVisitBanner {
+    .bannerWrapper {
         margin: 0 auto 16px;
     }
+}
+
+.segmentBanner,
+.allVisitorsBanner,
+.newVisitBanner {
+    margin: 0 auto;
 }
 .o-shop-by-size-banner {
     color: #000;
@@ -118,13 +125,11 @@
 }
 </style>
 
-<div class="o-shop-by-size-banner" style="background-color: grey">
-<div class="o-shop-by-size-banner__text"><slug>– Jusqu’à vendredi –</slug>
-    <strong>Jusqu’à -30 % sur <span class="hidden-xs"><br/></span>la mode scandinave</strong>
+<div class="bannerWrapper">
+    <div class="o-shop-by-size-banner" style="background-color: grey">
+        <div class="o-shop-by-size-banner__text"><slug>– Jusqu’à vendredi –</slug>
+            <strong>Jusqu’à -30 % sur <span class="hidden-xs"><br/></span>la mode scandinave</strong>
+        </div>
+    </div>  
+    <div class="o-shop-by-size-banner__info">*Valable jusqu‘au 10/11/2017, 23h59 sur les articles de cette page et les suivantes. Les prix affichés sont les prix de vente finaux.</div>
 </div>
-
-</div>
-<div class="o-shop-by-size-banner__info">*Valable jusqu‘au 10/11/2017, 23h59 sur les articles de cette page et les suivantes. Les prix affichés sont les prix de vente finaux.</div>
-
-
-

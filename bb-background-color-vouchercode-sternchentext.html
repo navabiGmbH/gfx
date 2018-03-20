@@ -8,14 +8,22 @@
         height: xxx;
     }
 
-    .segmentBanner, .allVisitorsBanner, .newVisitBanner {
-        margin: 20px auto 0;
+    .bannerWrapper {
+        margin: 16px auto 0;
     }
+
     @media (max-width: 768px) {
-        .segmentBanner, .allVisitorsBanner, .newVisitBanner {
+        .bannerWrapper {
             margin: 0 auto 16px;
         }
     }
+
+    .segmentBanner,
+    .allVisitorsBanner,
+    .newVisitBanner {
+        margin: 0 auto;
+    }
+
     .header-banner--exclusive {
         padding-top: 15px;
         padding-bottom: 21px;
@@ -53,7 +61,7 @@
 </style>
 
 
-<div class="container">
+<div class="container bannerWrapper">
 
     <div class="row">
 

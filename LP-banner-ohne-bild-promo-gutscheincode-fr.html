@@ -8,13 +8,20 @@
         height: xxx;
     }
 
-    .segmentBanner, .allVisitorsBanner, .newVisitBanner {
-        margin: 20px auto 0;
+    .bannerWrapper {
+        margin: 16px auto 0;
     }
+
     @media (max-width: 768px) {
-        .segmentBanner, .allVisitorsBanner, .newVisitBanner {
+        .bannerWrapper {
             margin: 0 auto 16px;
         }
+    }
+
+    .segmentBanner,
+    .allVisitorsBanner,
+    .newVisitBanner {
+        margin: 0 auto;
     }
 
     .o-shop-by-size-banner {
@@ -99,9 +106,9 @@
         
 
         .o-shop-by-size-banner__info    {
-            margin-top: 6px;
+            margin-top: 0;
             line-height: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 0;
         }
 
 
@@ -146,12 +153,12 @@
     }
 </style>
 
-<div class="o-shop-by-size-banner" style="background-color: #c5607b">
-    <div class="o-shop-by-size-banner__text"><slug>– Jusqu’à vendredi –</slug>
-        <strong>-20% sur la boutique vacances</strong><subline>Utilisez le code* <u>HOLIDAY</u></subline> 
+<div class="bannerWrapper">
+    <div class="o-shop-by-size-banner" style="background-color: #c5607b">
+        <div class="o-shop-by-size-banner__text"><slug>– Jusqu’à vendredi –</slug>
+            <strong>-20% sur la boutique vacances</strong><subline>Utilisez le code* <u>HOLIDAY</u></subline> 
+        </div>
     </div>
-   
-</div>
     <div class="o-shop-by-size-banner__info">*Valable jusqu’au 09.03.2018, 23:59 pour les articles de cette page et les suivantes. Non cumulable avec d’autres codes de réduction.
     </div>
-
+</div>
