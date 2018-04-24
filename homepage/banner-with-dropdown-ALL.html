@@ -1,0 +1,62 @@
+<div class="newHomepage__section">
+    <style type="text/css">
+        .o-sb1 {
+            bottom: 71px;
+            right: 276px;
+            width: 280px;
+            z-index: 10;
+        }
+    
+        @media screen and (max-width: 991px) {     
+            .o-sb1.o-sb {
+                bottom: 51px !important;
+                right: 173px;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .o-sb1.o-sb {
+                bottom: inherit !important;
+                right: inherit;
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="hpFullWidthBanner">
+        <div class="hpFullWidthBanner__linkWrapper">
+            <div class="hpFullWidthBanner__imageWrapper">
+                <picture class="hpFullWidthBanner__image">
+                    <source srcset="https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=1170&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
+                    <source srcset="https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=1536&fit=clip&q=75 2x" media="(max-width: 990px)">
+                    <source srcset="https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_mobile }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_mobile }}?w=1536&fit=clip&q=75 2x" media="(max-width: 768px)">
+                    <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=768&fit=clip&q=75" alt="">
+                </picture>
+            </div>
+        </div>
+        <div class="o-selectbox o-sb o-sb1">
+        <ul class="o-sb__desk-options"></ul>
+
+        <div class="o-sb__label"><b>{{ 2018_banner_with_dropdown__dropdown_title }}</b></div>
+
+        <select class="o-sb__native" onchange="oldGAlinkTracking($(this).val(), $(this).find('option:selected').data('tracking'))">
+            <option style="display: none">{{ 2018_banner_with_dropdown__dropdown_title }}</option>
+            <option value="{{ 2018_banner_with_dropdown__dropdown_first_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/dresses", 2]'>
+                {{ 2018_banner_with_dropdown__dropdown_first_text }}
+            </option>
+            <option value="{{ 2018_banner_with_dropdown__dropdown_second_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/tops", 2]'>
+                {{ 2018_banner_with_dropdown__dropdown_second_text }}
+            </option>
+            <option value="{{ 2018_banner_with_dropdown__dropdown_third_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/jackets", 2]'>
+                {{ 2018_banner_with_dropdown__dropdown_third_text }}
+            </option>
+            <option value="{{ 2018_banner_with_dropdown__dropdown_fourth_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/knitwear", 2]'>
+                {{ 2018_banner_with_dropdown__dropdown_fourth_text }}
+            </option>
+            <option value="{{ 2018_banner_with_dropdown__dropdown_fifth_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/trousers", 2]'>
+                {{ 2018_banner_with_dropdown__dropdown_fifth_text }}
+            </option>
+        </select>
+        </div>
+    </div>
+</div>
+
