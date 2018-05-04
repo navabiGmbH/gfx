@@ -1,12 +1,37 @@
+<style>
+.hpFullWidthBanner__text {
+  left: 225px;
+  top: 155px;
+}
+
+.hpFullWidthBanner__title {
+    font-size: 58px;
+}
+
+@media (max-width: 1200px) {
+  .hpFullWidthBanner__text {
+    left: 162px;
+    top: 119px;
+  } 
+}
+
+@media (max-width: 991px) {
+  .hpFullWidthBanner__text {
+    left: 85px;
+    top: 77px;
+  } 
+}
+</style>
+
 <div class="newHomepage__section">
   <div class="hpFullWidthBanner">
       <a class="hpFullWidthBanner__linkWrapper" href="{{ 2018_banner_with_cta__link }}">
       <div class="hpFullWidthBanner__imageWrapper">
           <picture class="hpFullWidthBanner__image">
-          <source srcset="https://navabi.imgix.net{{ 2018_image_desktop_for_banner_with_cta}}?w=970&fit=clip&q=75, https://navabi.imgix.net{{ 2018_image_desktop_for_banner_with_cta}}?w=1940&fit=clip&q=75 2x" media="(min-width: 991px)">
-          <source srcset="https://navabi.imgix.net{{ 2018_image_desktop_for_banner_with_cta}}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_image_desktop_for_banner_with_cta}}?w=1536&fit=clip&q=75 2x" media="(max-width: 990px)">
-          <source srcset="https://navabi.imgix.net{{ 2018_image_mobile_for_banner_with_cta}}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_image_mobile_for_banner_with_cta}}?w=1536&fit=clip&q=75 2x " media="(max-width: 768px)">
-          <img class="hpFullWidthBanner__image"srcset="https://navabi.imgix.net{{ 2018_image_desktop_for_banner_with_cta}}?w=768&fit=clip&q=75" alt="">
+          <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1170&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
+          <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1536&fit=clip&q=75 2x" media="(min-width: 768px)">
+          <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=1536&fit=clip&q=75 2x" media="(min-width: 0px)">
+          <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75" alt="">
           </picture>
       </div>
       <!-- 
@@ -20,13 +45,13 @@
       -->
       <div class="hpFullWidthBanner__text">
         <h4 class="hpFullWidthBanner__preTitle">
-          {{ 2018_pretitle_for_banner_with_cta}}
+          {{ 2018_banner_with_cta__pretitle }}
         </h4>
         <h1 class="hpFullWidthBanner__title">
-          {{ 2018_title_for_banner_with_cta}}
+          {{ 2018_banner_with_cta__title }}
         </h1>
         <button class="cta cta--bold">
-          {{ 2018_cta_for_banner_with_cta}}
+          {{ 2018_banner_with_cta__ctatext }}
         </button>
       </div>
       </a>
