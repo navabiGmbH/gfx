@@ -179,14 +179,22 @@
         </div>
 
     </div>
-    <script>
-        $('.js-header-banner-close').click(function() {
-            $('.js-header-banner').addClass('header-banner--closed')
-        })
-
-    </script>
-
 </div>
 
 
 <div class="u-clearfix"></div>
+
+<script>
+  $(document).ready(function () {
+    var hideHeaderBanner = $.cookie('hideHeaderBanner');
+
+    if (!hideHeaderBanner) {
+      $('.js-header-banner').addClass('is-active');
+    }
+
+    $('.js-header-banner-close').click(function() {
+        $('.js-header-banner').removeClass('is-active');
+        $.cookie('hideHeaderBanner', true, { expires: 7 });
+    })
+  });
+</script>
