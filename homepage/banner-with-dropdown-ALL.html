@@ -1,62 +1,78 @@
 <div class="newHomepage__section">
-    <style type="text/css">
-        .o-sb1 {
-            bottom: 71px;
-            right: 276px;
-            width: 280px;
-            z-index: 10;
-        }
-    
-        @media screen and (max-width: 991px) {     
-            .o-sb1.o-sb {
-                bottom: 51px !important;
-                right: 173px;
-            }
-        }
-        
-        @media screen and (max-width: 767px) {
-            .o-sb1.o-sb {
-                bottom: inherit !important;
-                right: inherit;
-                width: 100%;
-            }
-        }
-    </style>
-    <div class="hpFullWidthBanner">
-        <div class="hpFullWidthBanner__linkWrapper">
-            <div class="hpFullWidthBanner__imageWrapper">
-                <picture class="hpFullWidthBanner__image">
+    <div class="hpFullWidthBannerForDropdown">
+        <div class="hpFullWidthBannerForDropdown__contentWrapper">
+            <div class="hpFullWidthBannerForDropdown__titleWrapper">
+                <picture class="hpFullWidthBannerForDropdown__imageWrapper">
                     <source srcset="https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=1170&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
                     <source srcset="https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=1536&fit=clip&q=75 2x" media="(max-width: 990px)">
                     <source srcset="https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_mobile }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_mobile }}?w=1536&fit=clip&q=75 2x" media="(max-width: 768px)">
                     <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net{{ 2018_banner_with_dropdown__image_desktop }}?w=768&fit=clip&q=75" alt="">
                 </picture>
+                <div class="hpFullWidthBannerForDropdown__titles">
+                    <div class="hpFullWidthBanner__text -right">
+                        <h4 class="hpFullWidthBanner__preTitle">
+                            {{ 2018_banner_with_dropdown__pretitle }}
+                        </h4>
+                        <h1 class="hpFullWidthBanner__title">
+                            {{ 2018_banner_with_dropdown__title }}
+                        </h1>
+                        <h4 class="hpFullWidthBanner__subTitle">
+                            {{ 2018_banner_with_dropdown__subtitle }}
+                        </h4>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="o-selectbox o-sb o-sb1">
-        <ul class="o-sb__desk-options"></ul>
+        <div class="selectBox" data-js-selectbox>
+            <ul class="selectBox__desk-options"></ul>
 
-        <div class="o-sb__label"><b>{{ 2018_banner_with_dropdown__dropdown_title }}</b></div>
+            <div class="selectBox__label"><b>{{ 2018_banner_with_dropdown__dropdown_title }}</b></div>
 
-        <select class="o-sb__native" onchange="oldGAlinkTracking($(this).val(), $(this).find('option:selected').data('tracking'))">
-            <option style="display: none">{{ 2018_banner_with_dropdown__dropdown_title }}</option>
-            <option value="{{ 2018_banner_with_dropdown__dropdown_first_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/dresses", 2]'>
-                {{ 2018_banner_with_dropdown__dropdown_first_text }}
-            </option>
-            <option value="{{ 2018_banner_with_dropdown__dropdown_second_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/tops", 2]'>
-                {{ 2018_banner_with_dropdown__dropdown_second_text }}
-            </option>
-            <option value="{{ 2018_banner_with_dropdown__dropdown_third_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/jackets", 2]'>
-                {{ 2018_banner_with_dropdown__dropdown_third_text }}
-            </option>
-            <option value="{{ 2018_banner_with_dropdown__dropdown_fourth_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/knitwear", 2]'>
-                {{ 2018_banner_with_dropdown__dropdown_fourth_text }}
-            </option>
-            <option value="{{ 2018_banner_with_dropdown__dropdown_fifth_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/trousers", 2]'>
-                {{ 2018_banner_with_dropdown__dropdown_fifth_text }}
-            </option>
-        </select>
+            <select class="selectBox__native" onchange="oldGAlinkTracking($(this).val(), $(this).find('option:selected').data('tracking'))">
+                <option style="display: none">{{ 2018_banner_with_dropdown__dropdown_title }}</option>
+                <option value="{{ 2018_banner_with_dropdown__dropdown_first_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/dresses", 2]'>
+                    {{ 2018_banner_with_dropdown__dropdown_first_text }}
+                </option>
+                <option value="{{ 2018_banner_with_dropdown__dropdown_second_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/tops", 2]'>
+                    {{ 2018_banner_with_dropdown__dropdown_second_text }}
+                </option>
+                <option value="{{ 2018_banner_with_dropdown__dropdown_third_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/jackets", 2]'>
+                    {{ 2018_banner_with_dropdown__dropdown_third_text }}
+                </option>
+                <option value="{{ 2018_banner_with_dropdown__dropdown_fourth_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/knitwear", 2]'>
+                    {{ 2018_banner_with_dropdown__dropdown_fourth_text }}
+                </option>
+                <option value="{{ 2018_banner_with_dropdown__dropdown_fifth_link }}" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbycategory/trousers", 2]'>
+                    {{ 2018_banner_with_dropdown__dropdown_fifth_text }}
+                </option>
+            </select>
         </div>
     </div>
 </div>
 
+<script>
+$('[data-js-selectbox]').each(function () {
+    var thatParent = $(this);
+    thatParent.find('select option:not(:first)').each(function () {
+        var that = $(this);
+        var thatHref = $(this).val();
+        var thatTracking = $(this).attr('data-tracking');
+        
+        thatParent.find('.selectBox__desk-options').append("<li><a href='" + thatHref + "' data-tracking='" + thatTracking + "'>" + that.text() + "</a></li>");
+    });
+});
+
+if (!$('html').hasClass('dev-smartphone')) {
+    $('[data-js-selectbox]')
+    .on('mouseenter', function () {
+        if ($('.selectBox__desk-options').is(':not(:animated)')) {
+            $(this).find('.selectBox__desk-options').slideDown(250);
+        }
+    })
+    .on('mouseleave', function () {
+        if ($('.selectBox__desk-options').is(':not(:animated)')) {
+            $(this).find('.selectBox__desk-options').slideUp(250);
+        }
+    });
+}
+</script>

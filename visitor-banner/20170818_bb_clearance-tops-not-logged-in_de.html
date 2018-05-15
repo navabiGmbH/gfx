@@ -164,31 +164,30 @@
 
 
 <div class="container escape-header-banner__wrapper bannerWrapper js-header-banner">
-    
     <div class="row">
-        
         <div class="header-banner--login">
             <span class="header-banner__close js-header-banner-close">&times;</span>
-            
             <a href="/customer/login.html" onclick="var that = this;_gaq.push(['_set', 'hitCallback', function() { document.location.href = that.href}]);_gaq.push(['_trackEvent', '{ga_country}/banner', '{ga_country}/bodenbanner', '{ga_country}/clearance-mysale-login', 2]);return !(window._gat && window._gat.w);">
-                
                 Loggen Sie sich jetzt ein und erhalten Sie <strong>Extrarabatte</strong> auf bereits reduzierte <strong>Oberteile</strong><span class="banner-gt"><strong>&nbsp;&gt;</strong></span>
-                
                 <span class="header-banner--login-cta">Jetzt einloggen&nbsp;&gt;</span>
-                
             </a>
-            
         </div>
-        
-    </div>
-    <script>
-        $('.js-header-banner-close').click(function() {
-            $('.js-header-banner').addClass('header-banner--closed')
-        })
-        
-    </script>
-    
+    </div>    
 </div>
 
-
 <div class="u-clearfix"></div>
+
+<script>
+  $(document).ready(function () {
+    var hideHeaderBanner = $.cookie('hideHeaderBanner');
+
+    if (!hideHeaderBanner) {
+      $('.js-header-banner').addClass('is-active');
+    }
+
+    $('.js-header-banner-close').click(function() {
+        $('.js-header-banner').removeClass('is-active');
+        $.cookie('hideHeaderBanner', true, { expires: 7 });
+    })
+  });
+</script>

@@ -1,47 +1,60 @@
 <style>
-    .hpFullWidthBanner__text {
-      left: 201px;
-      top: 150px;
-    }
-    
-    @media (max-width: 1024px) {
-      .hpFullWidthBanner__text {
-    
-      } 
-    }
-    </style>
-    
-    <div class="newHomepage__section">
-      <div class="hpFullWidthBanner">
-          <a class="hpFullWidthBanner__linkWrapper" href="{{ 2018_banner_with_cta_link }}">
-          <div class="hpFullWidthBanner__imageWrapper">
-              <picture class="hpFullWidthBanner__image">
-              <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=970&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1940&fit=clip&q=75 2x" media="(min-width: 991px)">
-              <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1536&fit=clip&q=75 2x" media="(max-width: 990px)">
-              <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=1536&fit=clip&q=75 2x " media="(max-width: 768px)">
-              <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75" alt="">
-              </picture>
-          </div>
-          <!-- 
-            You can move this on the right side by adding the -right class, 
-            like so:
-            <div class="hpFullWidthBanner__text -right">
-              Also you can make the text white by using
-            <div class="hpFullWidthBanner__text -white">
-              and of course you can make them both right and white
-            <div class="hpFullWidthBanner__text -white -right">
-          -->
-          <div class="hpFullWidthBanner__text">
-            <h4 class="hpFullWidthBanner__preTitle">
-              {{ 2018_banner_with_cta__pretitle }}
-            </h4>
-            <h1 class="hpFullWidthBanner__title">
-              {{ 2018_banner_with_cta__title }}
-            </h1>
-            <button class="cta cta--bold">
-              {{ 2018_banner_with_cta__ctatext }}
-            </button>
-          </div>
-          </a>
+.hpFullWidthBanner__text {
+  left: 225px;
+  top: 155px;
+}
+
+@media (max-width: 1200px) {
+  .hpFullWidthBanner__text {
+    left: 162px;
+    top: 119px;
+  } 
+}
+
+@media (max-width: 991px) {
+  .hpFullWidthBanner__text {
+    left: 97px;
+    top: 77px;
+  } 
+}
+</style>
+
+<div class="newHomepage__section">
+  <div class="hpFullWidthBanner">
+      <a class="hpFullWidthBanner__linkWrapper" href="{{ 2018_banner_with_cta__link }}">
+      <div class="hpFullWidthBanner__imageWrapper">
+          <picture class="hpFullWidthBanner__image">
+          <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1170&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
+          <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1536&fit=clip&q=75 2x" media="(min-width: 768px)">
+          <source srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=1536&fit=clip&q=75 2x" media="(min-width: 0px)">
+          <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75" alt="">
+          </picture>
       </div>
-    </div>
+      <!-- 
+        You can move this on the right side by adding the -right class, 
+        like so:
+        <div class="hpFullWidthBanner__text -right">
+          Also you can make the text white by using
+        <div class="hpFullWidthBanner__text -white">
+          and of course you can make them both right and white
+        <div class="hpFullWidthBanner__text -white -right">
+      -->
+      <div class="hpFullWidthBanner__text">
+        <h4 class="hpFullWidthBanner__preTitle">
+          {{ 2018_banner_with_cta__pretitle }}
+        </h4>
+        <h1 class="hpFullWidthBanner__title">
+          {{ 2018_banner_with_cta__title }}
+        </h1>
+        <!--
+        <h4 class="hpFullWidthBanner__subTitle">
+          {{ 2018_banner_with_cta__subtitle }}
+        </h4>
+        -->
+        <button class="cta cta--bold">
+          {{ 2018_banner_with_cta__ctatext }}
+        </button>
+      </div>
+      </a>
+  </div>
+</div>
