@@ -1,0 +1,120 @@
+<link href="https://fonts.googleapis.com/css?family=Prata|Source+Sans+Pro:300" rel="stylesheet">
+
+<style>
+  .categoryFullWidthBanner__logo,
+  .categoryFullWidthBanner__text {
+    position: relative;
+    text-align: center;
+  }
+
+  .categoryFullWidthBanner__text {
+  	max-width: 400px;
+  }
+  
+  .categoryFullWidthBanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 401px;
+    border-bottom: 1px solid black;
+  }
+
+  .categoryFullWidthBanner__background {
+    max-height: 400px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    /* GRADIENT CODE GOES HERE */
+    background: #50C9C3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .categoryFullWidthBanner__text h1 {
+    font-family: 'Prata', serif;
+    font-style: italic;
+    font-size: 42px;
+  }
+
+  .categoryFullWidthBanner__text h2 {
+  	font-family: 'Source Sans Pro', sans-serif;
+  	font-weight: 300;
+  	font-size: 18px;
+  	line-height: 1.375;
+    margin-bottom: 16px;
+    /* this margin top is needed when there are letters like p or g */
+    /* margin-top: 16px; */
+  }
+
+  .categoryFullWidthBanner__disclaimer {
+    position: absolute;
+    bottom: 0;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .categoryFullWidthBanner__textBold {
+    font-family: 'font sans serif black', Arial, sans-serif !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .categoryFullWidthBanner__text {
+      padding: 0 0 24px;
+    }
+
+    .categoryFullWidthBanner__text h1 {
+      font-size: 36px;
+    }
+
+    .categoryFullWidthBanner__text h2 {
+      font-size: 14px;
+    }
+
+    .categoryFullWidthBanner {
+      min-height: auto;
+      border-bottom: 0;
+    }
+
+    .categoryFullWidthBanner__background {
+      height: 300px;
+      margin-top: 20px;
+      position: static;
+    }
+
+    .categoryFullWidthBanner__logoImage {
+      width: 275px;
+      margin: 20px auto;
+    }
+
+    .categoryFullWidthBanner__background {
+      height: 0;
+    }
+
+    .categoryFullWidthBanner__disclaimer {
+      position: static;
+      padding: 0 32px 16px;
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.375;
+    }
+  }
+
+</style>
+
+<div class="categoryFullWidthBanner">
+  <div class="categoryFullWidthBanner__background"></div>
+  <div class="categoryFullWidthBanner__text">
+    <h2 class="categoryFullWidthBanner__textBold">
+      – Bis Donnerstag –
+    </h2>
+    <h1>
+    	Bis zu -30 % auf<br>maritime Styles
+    </h1>
+  </div>
+  <h6 class="categoryFullWidthBanner__disclaimer">Gültig bis zum 24.05.2018, 23:59 Uhr, und nur für die Artikel auf dieser und den folgenden Seiten. Die angegebenen Preise sind die Endpreise.</h6>
+</div>
