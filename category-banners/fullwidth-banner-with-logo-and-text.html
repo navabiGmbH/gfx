@@ -1,0 +1,286 @@
+<script>
+  // Picture element HTML5 shiv
+  document.createElement( "picture" );
+</script>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+
+<style>
+  .categoryFullWidthBanner__logo,
+  .categoryFullWidthBanner__text {
+    position: relative;
+    text-align: center;
+  }
+
+  .categoryFullWidthBanner__text {
+  	max-width: 400px;
+  }
+  
+  .categoryFullWidthBanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 301px;
+    border-bottom: 1px solid black;
+  }
+
+  .categoryFullWidthBanner__background {
+    max-height: 300px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    /* GRADIENT CODE GOES HERE */
+    background: #50C9C3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .categoryFullWidthBanner__text h1 {
+    font-family: 'Prata', serif;
+    font-style: italic;
+    font-size: 42px;
+  }
+
+  .categoryFullWidthBanner__text h2 {
+  	font-family: 'Source Sans Pro', sans-serif;
+  	font-weight: 300;
+  	font-size: 18px;
+  	line-height: 1.375;
+    margin-bottom: 16px;
+    /* this margin top is needed when there are letters like p or g */
+    /* margin-top: 16px; */
+  }
+
+  .categoryFullWidthBanner__disclaimer {
+    position: absolute;
+    bottom: 0;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .categoryFullWidthBanner__textBold {
+    font-family: 'font sans serif black', Arial, sans-serif !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .categoryFullWidthBanner__text {
+      padding: 0 0 24px;
+    }
+
+    .categoryFullWidthBanner__text h1 {
+      font-size: 36px;
+    }
+
+    .categoryFullWidthBanner__text h2 {
+      font-size: 14px;
+    }
+
+    .categoryFullWidthBanner {
+      min-height: auto;
+      border-bottom: 0;
+    }
+
+    .categoryFullWidthBanner__background {
+      height: 300px;
+      margin-top: 20px;
+      position: static;
+    }
+
+    .categoryFullWidthBanner__logoImage {
+      width: 275px;
+      margin: 20px auto;
+    }
+
+    .categoryFullWidthBanner__background {
+      height: 0;
+    }
+
+    .categoryFullWidthBanner__disclaimer {
+      position: static;
+      padding: 0 32px 16px;
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.375;
+    }
+  }
+
+</style>
+
+<div class="categoryFullWidthBanner">
+  <div class="categoryFullWidthBanner__background"></div>
+  <div class="categoryFullWidthBanner__text">
+    <h2 class="categoryFullWidthBanner__textBold">
+      – Ends Thursday –
+    </h2>
+    <h1>
+    	Up to 30% off<br>nautical styles
+    </h1>
+  </div>
+  <h6 class="categoryFullWidthBanner__disclaimer">This offer expires at 11:59pm on 24.05.2018 and applies to items on this page and the following pages. Prices shown already include the discount.</h6>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
+
+<style>
+  .categoryFullWidthBanner__logo {
+    position: relative;
+    text-align: center;
+    max-width: 300px;
+  }
+
+  .categoryFullWidthBanner__logoImage {
+    max-width: 300px;
+  }
+
+  .categoryFullWidthBanner__text {
+    position: relative;
+    text-align: center;
+  }
+  .categoryFullWidthBanner__text {
+    max-width: 400px;
+  }
+
+  .categoryFullWidthBanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 401px;
+    border-bottom: 1px solid black;
+  }
+
+  .categoryFullWidthBanner__background {
+    max-height: 400px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    /* Image for mobile */
+    background: url(https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi-m.jpg?w=768) no-repeat center top / cover;
+  }
+   .categoryFullWidthBanner__text h2 {
+    margin-top: 20px; /*abstand zwischen logo und text*/
+    margin-bottom: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.375;
+    /* this margin top is needed when there are letters like p or g */
+    /* margin-top: 16px; */
+  }
+  
+  @media screen and (max-width: 768px) {
+        .categoryFullWidthBanner {
+            min-height: auto;
+        }
+
+        .categoryFullWidthBanner__background {
+            height: 300px;
+            margin-top: 20px;
+            position: static;
+        }
+
+        .categoryFullWidthBanner__logoImage {
+            width: 275px;
+            margin: 20px auto;
+      }
+
+      .categoryFullWidthBanner__text h2 {
+        font-size: 14px;
+      }
+  }
+
+  @media screen and (max-width: 550px) {
+        .categoryFullWidthBanner__background {
+            height: 200px;
+        }
+  }
+  
+  
+  @media
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      .categoryFullWidthBanner__background {
+          /* Image for mobile */
+          background: url(https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi-m.jpg?w=1536) no-repeat center top / cover;
+      }
+  }
+  
+  @media screen and (min-width: 768px) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop */
+          background: url(https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi-d.jpg?w=1200) no-repeat 20% top / cover;
+      }
+  }
+  
+  @media
+    screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 768px) and (min-resolution: 192dpi),
+    screen and (min-width: 768px) and (min-resolution: 2dppx) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop */
+          background: url(https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi-d.jpg?w=2400) no-repeat 20% top / cover;
+      }
+  }
+
+  @media screen and (min-width:1200px) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop */
+          background: url(https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi-d.jpg?w=1920) no-repeat center top / cover;
+      }
+  }
+  
+  @media
+    screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 1200px) and (min-resolution: 192dpi),
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop */
+          background: url(https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi-d.jpg?w=3840) no-repeat center top / cover;
+      }
+  }
+  
+  @media screen and (min-width:1920px) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop */
+          background: url(https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi-d.jpg?w=2560) no-repeat center top / cover;
+      }
+  }
+  
+  @media
+    screen and (min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 1920px) and (min-resolution: 192dpi),
+    screen and (min-width: 1920px) and (min-resolution: 2dppx) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop */
+          background: url(https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi-d.jpg?w=6120) no-repeat center top / cover;
+      }
+  }
+</style>
+
+<div class="categoryFullWidthBanner">
+  <div class="categoryFullWidthBanner__background"></div>
+  <div class="categoryFullWidthBanner__logo">
+    <picture>
+      <source srcset="https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi_black2.png?w=300, 
+                      https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi_black2.png?w=600 2x" media="(min-width: 768px)">
+      <source srcset="https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi_black2.png?w=300, 
+                      https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi_black2.png?w=600 2x" media="(min-width: 0)">
+      <img srcset="https://navabi.imgix.net/img/filterset/designer/2018/zizzi/zizzi_black2.png?w=300" alt="Banner Image" class="categoryFullWidthBanner__logoImage">
+    </picture>
+  </div>
+
+  <div class="categoryFullWidthBanner__text">
+    <h2>
+      From Denmark with Love: Das Go-to-Label für trendbewusste Fashionistas punktet mit femininen Designs, märchenhaften Elementen, sportlichem Chic und setzt mit klassischem Schwarz-Weiß als auch mit leuchtenden Farben gekonnt Akzente.
+    </h2>
+  </div>
+</div>
+
