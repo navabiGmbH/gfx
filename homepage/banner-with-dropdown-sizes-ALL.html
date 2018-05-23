@@ -1,0 +1,119 @@
+<style type="text/css">
+.selectBox {
+    bottom: 70px;
+    cursor: pointer;
+    position: absolute;
+    right: 154px;
+    width: 250px;
+    z-index: 10;
+}
+.selectBox__desk-options li {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+  .selectBox, .o-sb {
+    bottom: inherit;
+    margin-bottom: 16px;
+    position: static !important;
+    right: inherit;
+    width: 50% !important;
+    margin: 0 auto;
+  }
+}
+
+</style>
+
+<div class="newHomepage__section">
+    <div class="hpFullWidthBannerForDropdown">
+        <div class="hpFullWidthBannerForDropdown__contentWrapper">
+            <div class="hpFullWidthBannerForDropdown__titleWrapper">
+                <picture class="hpFullWidthBannerForDropdown__imageWrapper">
+                    <source srcset="https://navabi.imgix.net/img/index/2018/05/nautical-d.jpg?w=1170&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/nautical-d.jpg?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
+                    <source srcset="https://navabi.imgix.net/img/index/2018/05/nautical-d.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/nautical-d.jpg?w=1536&fit=clip&q=75 2x" media="(max-width: 990px)">
+                    <source srcset="https://navabi.imgix.net/img/index/2018/05/nautical-m.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/nautical-m.jpg?w=1536&fit=clip&q=75 2x" media="(max-width: 768px)">
+                    <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net/img/index/2018/05/nautical-d.jpg?w=768&fit=clip&q=75" alt="">
+                </picture>
+                <div class="hpFullWidthBannerForDropdown__titles">
+                    <div class="hpFullWidthBanner__text -right">
+                        <h4 class="hpFullWidthBanner__preTitle">
+                            Pretitle
+                        </h4>
+                        <h1 class="hpFullWidthBanner__title">
+                            Title
+                        </h1>
+                        <h4 class="hpFullWidthBanner__subTitle">
+                            Subtitle
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="selectBox" data-js-selectbox>
+            <ul class="selectBox__desk-options"></ul>
+
+            <div class="selectBox__label"><b>Shop Now</b></div>
+
+            <select class="selectBox__native" onchange="oldGAlinkTracking($(this).val(), $(this).find('option:selected').data('tracking'))">
+                <option style="display: none">Dropdown Title</option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,1" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/14", 2]'>
+                    14
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,2" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/16", 2]'>
+                    16
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,3" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/18", 2]'>
+                    18
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,4" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/20", 2]'>
+                    20
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,5" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/22", 2]'>
+                    22
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,6" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/24", 2]'>
+                    24
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,7" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/26", 2]'>
+                    26
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,8" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/28", 2]'>
+                    28
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,9" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/30", 2]'>
+                    30
+                </option>
+                <option value="https://www.navabi.co.uk/womens-clothing/?size=,10" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbysize/32", 2]'>
+                    32
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<script>
+$('[data-js-selectbox]').each(function () {
+    var thatParent = $(this);
+    thatParent.find('select option:not(:first)').each(function () {
+        var that = $(this);
+        var thatHref = $(this).val();
+        var thatTracking = $(this).attr('data-tracking');
+        
+        thatParent.find('.selectBox__desk-options').append("<li><a href='" + thatHref + "' data-tracking='" + thatTracking + "'>" + that.text() + "</a></li>");
+    });
+});
+
+if (!$('html').hasClass('dev-smartphone')) {
+    $('[data-js-selectbox]')
+    .on('mouseenter', function () {
+        if ($('.selectBox__desk-options').is(':not(:animated)')) {
+            $(this).find('.selectBox__desk-options').slideDown(250);
+        }
+    })
+    .on('mouseleave', function () {
+        if ($('.selectBox__desk-options').is(':not(:animated)')) {
+            $(this).find('.selectBox__desk-options').slideUp(250);
+        }
+    });
+}
+</script>
