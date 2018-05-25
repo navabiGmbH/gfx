@@ -62,8 +62,16 @@
             font-size: 17px;
         }
     }
+
+    .categoryFullWidthBanner {
+        border-top: 1px solid black;
+    }
     
-    @media screen and (max-width: 767px){
+    .categoryFullWidthBanner {
+        min-height: 300px !important;
+    }
+
+    @media screen and (max-width: 768px){
         .nvspo [class*="header-banner-"]{
             font-size: 23px;
             margin-top: 0px !important;
@@ -75,6 +83,11 @@
         }
         .header-banner--exclusive small {
             margin-top: 10px;
+        }
+
+        .categoryFullWidthBanner__background {
+            margin-top: 0px !important;
+            height: 220px;
         }
     }
 </style>
