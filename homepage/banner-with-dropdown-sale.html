@@ -11,9 +11,13 @@
 .selectBox__desk-options li {
     text-align: center;
 }
+
 @media (max-width: 768px) {
   .selectBox {
      margin-left: 0;
+  }
+  .selectBox__native {
+    font-size: 16px;
   }
 }
 </style>
@@ -23,28 +27,26 @@
         <div class="hpFullWidthBannerForDropdown__contentWrapper">
             <div class="hpFullWidthBannerForDropdown__titleWrapper">
                 <picture class="hpFullWidthBannerForDropdown__imageWrapper">
-                    <source srcset="https://navabi.imgix.net/img/index/2018/05/clearance_de-d.jpg?w=1170&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/clearance_de-d.jpg?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
-                    <source srcset="https://navabi.imgix.net/img/index/2018/05/clearance_de-d.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/clearance_de-d.jpg?w=1536&fit=clip&q=75 2x" media="(max-width: 990px)">
-                    <source srcset="https://navabi.imgix.net/img/index/2018/05/clearance_de-m.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/clearance_de-m.jpg?w=1536&fit=clip&q=75 2x" media="(max-width: 768px)">
-                    <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net/img/index/2018/05/clearance_de-d.jpg?w=768&fit=clip&q=75" alt="">
+                    <source srcset="https://navabi.imgix.net/img/index/2018/05/clearance_fr-d.jpg?w=1170&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/clearance_fr-d.jpg?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
+                    <source srcset="https://navabi.imgix.net/img/index/2018/05/clearance_fr-d.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/clearance_fr-d.jpg?w=1536&fit=clip&q=75 2x" media="(min-width: 769px)">
+                    <source srcset="https://navabi.imgix.net/img/index/2018/05/clearance_fr-m.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/05/clearance_fr-m.jpg?w=1536&fit=clip&q=75 2x" media="(min-width: 0px)">
+                    <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net/img/index/2018/05/clearance_fr-d.jpg?w=768&fit=clip&q=75" alt="">
                 </picture>
             </div>
         </div>
         <div class="selectBox" data-js-selectbox>
             <ul class="selectBox__desk-options"></ul>
-
-            <div class="selectBox__label"><b>Schlussverkauf shoppen></b></div>
-
-            <select class="selectBox__native" onchange="oldGAlinkTracking($(this).val(), $(this).find('option:selected').data('tracking'))">
-                <option style="display: none">Schlussverkauf shoppen></option>
-                <option value="https://www.navabi.de/thema/bis-zu-60-prozent/" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbyDiscount/60", 2]'>
-                    Bis zu 60%
+            <div class="selectBox__label"><b>Vers les liquidations ></b></div>
+            <select class="selectBox__native" id="selectBox__native" onchange="oldGAlinkTracking($(this).val(), $(this).find('option:selected').data('tracking'))">
+                <option style="display: none">Vers les liquidations ></option>
+                <option value="https://www.navabi.fr/theme/jusqua-60-pourcent/" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbyDiscount/60", 2]'>
+                    Jusqu'à -60% >
                 </option>
-                <option value="https://www.navabi.de/thema/bis-zu-50-prozent/" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbyDiscount/50", 2]'>
-                    Bis zu 50%
+                <option value="https://www.navabi.fr/theme/jusqua-50-pourcent/" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbyDiscount/50", 2]'>
+                    Jusqu'à -50% >
                 </option>
-                <option value="https://www.navabi.de/thema/bis-zu-40-prozent/" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbyDiscount/40", 2]'>
-                    Bis zu 40%
+                <option value="https://www.navabi.fr/theme/jusqua-40-pourcent/" data-tracking='["/Teaser/Start", "/3.1.0", "/shopSALEbyDiscount/40", 2]'>
+                    Jusqu'à -40% >
                 </option>
             </select>
         </div>
@@ -76,4 +78,10 @@ if (!$('html').hasClass('dev-smartphone')) {
         }
     });
 }
+
+var selectEl = document.getElementById('selectBox__native');
+
+selectEl.onchange = function(){
+    window.location = this.value;
+};
 </script>
