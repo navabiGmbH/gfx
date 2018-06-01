@@ -12,6 +12,10 @@
     text-align: center;
 }
 
+.selectBox__desk-options li:first-child {
+    display: none;
+}
+
 @media (max-width: 768px) {
   .selectBox {
      margin-left: 0;
@@ -36,18 +40,19 @@
         </div>
         <div class="selectBox" data-js-selectbox>
             <ul class="selectBox__desk-options"></ul>
-            <div class="selectBox__label" id="selectBox__label" data-tracking='2018_sale_banner_with_dropdown_cta' data-href="/specials.html">
+            <div class="selectBox__label" id="selectBox__label" data-tracking='2018_sale_banner_with_dropdown_cta' data-href="/ofertas.html">
                 <b>Shop clearance ></b>
             </div>
             <select id="selectBox__native" class="selectBox__native" onchange="oldGAlinkTracking($(this).val(), $(this).find('option:selected').data('tracking'))">
-                <option style="display: none">Shop clearance ></option>
-                <option value="/topic/up-to-60-percent/" data-tracking='2018_sale_banner_with_dropdown_a'>
+                <option>Escoge una opción</option>
+                <option value="/ofertas.html" data-tracking='2018_sale_banner_with_dropdown_mobile_sale'>Shop clearance ></option>
+                <option value="/topic/hasta-60-porciento/" data-tracking='2018_sale_banner_with_dropdown_a'>
                     Up to 60% off >
                 </option>
-                <option value="/topic/up-to-50-percent/" data-tracking='2018_sale_banner_with_dropdown_b'>
+                <option value="/topic/hasta-50-porciento/" data-tracking='2018_sale_banner_with_dropdown_b'>
                     Up to 50% off >
                 </option>
-                <option value="/topic/up-to-40-percent/" data-tracking='2018_sale_banner_with_dropdown_c'>
+                <option value="/topic/hasta-40-porciento/" data-tracking='2018_sale_banner_with_dropdown_c'>
                     Up to 40% off >
                 </option>
             </select>
