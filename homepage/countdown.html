@@ -1,0 +1,212 @@
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+
+<style>
+    .hpCountDown__number {
+        color: #000000;
+    }
+    .hpCountDown__box {
+        border-color: #000000;
+    }
+    .hpCountDown__title,
+    .hpCountDown__subtitle {
+        color: #ffffff;
+    }
+
+    .hpCountDown__textBoxLine {
+        color: #ffffff;
+    }
+</style>
+
+
+<div class="newHomepage__section">
+    <!-- 
+        add classes hpFullWidthBanner--right
+        to have the counter on the right and the text on the left
+
+        add class hpFullWidthBanner--center
+        to center the counter (but it will remove the textbox)
+     -->
+    <div class="hpFullWidthBanner">
+        <div class="hpFullWidthBanner__imageWrapper hpFullWidthBanner__imageWrapper--counter">
+            <picture class="hpFullWidthBanner__image">
+            <source srcset="https://navabi.imgix.net/img/filterset/content/homepage/sale-d.jpg?w=1170&fit=clip&q=75, https://navabi.imgix.net/img/filterset/content/homepage/sale-d.jpg?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
+            <source srcset="https://navabi.imgix.net/img/filterset/content/homepage/sale-d.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/filterset/content/homepage/sale-d.jpg?w=1536&fit=clip&q=75 2x" media="(min-width: 768px)">
+            <source srcset="https://navabi.imgix.net/img/filterset/content/homepage/sale-m.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/filterset/content/homepage/sale-m.jpg?w=1536&fit=clip&q=75 2x" media="(min-width: 0px)">
+            <img class="hpFullWidthBanner__image" srcset="https://navabi.imgix.net/img/filterset/content/homepage/sale-m.jpg?w=768&fit=clip&q=75" alt="">
+            </picture>
+        </div>
+        <div class="hpCountDown">
+            <div class="hpCountDown__innerContainer">
+                <div class="hpCountDown__title">
+                    Sale Countdown
+                </div>
+                <div class="hpCountDown__counter" id="navabiCountDownDiv">
+                </div>
+                <div class="hpCountDown__subtitle">
+                    Left to shop up to <span class="hpCountDown__subtitleNumber">70%</span> off
+                </div>
+                <div class="hpCountDown__ctas">
+                    <div class="hpCountDown__ctaLeft">
+                        <a href="#" class="cta cta--bold cta--large" href="">Shop Sale Now ></a>
+                    </div>
+                    <div class="hpCountDown__ctaRight">
+                        <div class="hpCountDown__selectBoxContainer">
+                            <div class="hpCountDown__selectBox selectBox" data-js-selectbox>
+                                <ul class="selectBox__desk-options"></ul>
+                                <div class="selectBox__label" id="selectBox__label" data-tracking='2018_sale_banner_with_dropdown_cta' data-href="/ofertas.html">
+                                    <b class="selectBox__labelText">Shop clearance ></b>
+                                </div>
+                                <select id="selectBox__native" class="selectBox__native" onchange="oldGAlinkTracking($(this).val(), $(this).find('option:selected').data('tracking'))">
+                                    <option></option>
+                                    <option value="/ofertas.html" data-tracking='2018_sale_banner_with_dropdown_mobile_sale'>Shop clearance ></option>
+                                    <option value="/topic/up-to-60-percent/" data-tracking='2018_sale_banner_with_dropdown_a'>
+                                        Up to 60% off >
+                                    </option>
+                                    <option value="/topic/up-to-50-percent/" data-tracking='2018_sale_banner_with_dropdown_b'>
+                                        Up to 50% off >
+                                    </option>
+                                    <option value="/topic/up-to-40-percent/" data-tracking='2018_sale_banner_with_dropdown_c'>
+                                        Up to 40% off >
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="hpCountDown__textBox">
+                <div class="hpCountDown__textBoxLine">
+                    ADDITIONAL
+                </div>
+                <div class="hpCountDown__textBoxLine hpCountDown__textBoxLine--large">
+                    70% OFF
+                </div>
+                <div class="hpCountDown__textBoxLine">
+                    ALL SALE-STYLE
+                </div>
+
+                <!-- This is used for adding an empty line -->
+                <div class="hpCountDown__textBoxLine hpCountDown__textBoxLine--spacer">
+                </div>
+
+                <div class="hpCountDown__textBoxLine hpCountDown__textBoxLine--thin">
+                    Enter the code
+                </div>
+                <div class="hpCountDown__textBoxLine">
+                    EXTRA 15%
+                </div>
+                <div class="hpCountDown__textBoxLine hpCountDown__textBoxLine--thin">
+                    in your
+                </div>
+                <div class="hpCountDown__textBoxLine hpCountDown__textBoxLine--thin">
+                    shopping Bag
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+// Set the date we're counting down to
+// This date is relative to the user's computer.
+var countDownDate = new Date("Aug 8, 2018 15:08:00").getTime();
+
+// Add the translations here
+var translatedDaysPlural = ' Days';
+var translatedDaysSingle = ' Day';
+var translatedHoursPlural = ' Hours';
+var translatedHoursSingle = ' Hour';
+var translatedMinutesPlural = ' Minutes';
+var translatedMinutesSingle = ' Minute';
+var translatedSecondsPlural = ' Seconds';
+var translatedSecondsSingle = ' Second';
+
+var openDivNumber = '<div class="hpCountDown__number">';
+var openDivLabel = '<div class="hpCountDown__label">';
+var closeDiv = '</div>';
+
+var counterDiv = document.getElementById('navabiCountDownDiv');
+
+// Update the count down every 1 second
+var navabiCountDown = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  var daysLabel = (days > 1 || days === 0) ? translatedDaysPlural : translatedDaysSingle;
+  var hoursLabel = (hours > 1 || hours === 0) ? translatedHoursPlural : translatedHoursSingle;
+  var minutesLabel = (minutes > 1 || minutes === 0) ? translatedMinutesPlural : translatedMinutesSingle;
+  var secondsLabel = (seconds > 1 || seconds === 0) ? translatedSecondsPlural : translatedSecondsSingle;
+  
+  var zeroValue = '0';
+
+
+  // If the count down is finished, write some text 
+  if (distance > 0) {
+    var daysDiv = '<div class="hpCountDown__box--days hpCountDown__box">' + openDivNumber + days + closeDiv + openDivLabel + daysLabel + closeDiv + '</div>';
+    var hoursDiv = '<div class="hpCountDown__box--hours hpCountDown__box">' + openDivNumber + hours + closeDiv + openDivLabel + hoursLabel + closeDiv + '</div>';
+    var minutesDiv = '<div class="hpCountDown__box--minutes hpCountDown__box">'+ openDivNumber + minutes + closeDiv + openDivLabel + minutesLabel + closeDiv + '</div>';
+    var secondsDiv = '<div class="hpCountDown__box--seconds hpCountDown__box">'+ openDivNumber + seconds + closeDiv + openDivLabel + secondsLabel + closeDiv + '</div>' ;
+  } else {
+    clearInterval(navabiCountDown);
+    var daysDiv = '<div class="hpCountDown__box--days hpCountDown__box">' + openDivNumber + zeroValue + closeDiv + openDivLabel + daysLabel + closeDiv + '</div>';
+    var hoursDiv = '<div class="hpCountDown__box--hours hpCountDown__box">' + openDivNumber + zeroValue + closeDiv + openDivLabel + hoursLabel + closeDiv + '</div>';
+    var minutesDiv = '<div class="hpCountDown__box--minutes hpCountDown__box">'+ openDivNumber + zeroValue + closeDiv + openDivLabel + minutesLabel + closeDiv + '</div>';
+    var secondsDiv = '<div class="hpCountDown__box--seconds hpCountDown__box">'+ openDivNumber + zeroValue + closeDiv + openDivLabel + secondsLabel + closeDiv + '</div>' ;
+  }
+  
+  counterDiv.innerHTML = daysDiv + hoursDiv + minutesDiv + secondsDiv;
+}, 1000); 
+
+// Code for selectbox
+
+$('[data-js-selectbox]').each(function () {
+    var thatParent = $(this);
+    thatParent.find('select option:not(:first)').each(function () {
+        var that = $(this);
+        var thatHref = $(this).val();
+        var thatTracking = $(this).attr('data-tracking');
+        
+        thatParent.find('.selectBox__desk-options').append("<li><a href='" + thatHref + "' data-tracking='" + thatTracking + "'>" + that.text() + "</a></li>");
+    });
+});
+if (!$('html').hasClass('dev-smartphone')) {
+    $('[data-js-selectbox]')
+    .on('mouseenter', function () {
+        if ($('.selectBox__desk-options').is(':not(:animated)')) {
+            $(this).find('.selectBox__desk-options').slideDown(250);
+        }
+    })
+    .on('mouseleave', function () {
+        if ($('.selectBox__desk-options').is(':not(:animated)')) {
+            $(this).find('.selectBox__desk-options').slideUp(250);
+        }
+    });
+}
+
+var buttonHref = document.getElementById('selectBox__label');
+buttonHrefLocation = buttonHref.dataset.href;
+buttonHref.addEventListener('click', function(event){
+    if($(window).width() > 768) {
+        window.location = buttonHrefLocation;
+    }
+});
+var selectEl = document.getElementById('selectBox__native');
+selectEl.onchange = function(){
+    if (this.value) {
+        window.location = this.value;
+        selectEl.selectedIndex = '0';
+    }
+};
+</script>
