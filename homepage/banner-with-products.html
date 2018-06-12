@@ -1,132 +1,4 @@
-<style>
-
-.hpFullWidthBanner__text {
-  left: 571px;
-  top: 70px;
-  width: 420px;
-}
-
-.hpFullWidthBanner__subTitle {
-  font-size: 21px;
-  font-family: "font sans serif normal",Arial,sans-serif;
-  line-height: 1;
-  text-transform: none;
-  font-weight: 400;
-}
-
-.hpFullWidthBanner__preTitle {
-  font-size: 18px;
-  font-family: "font sans serif normal",Arial,sans-serif;
-  line-height: 2;
-  text-transform: uppercase;
-}
-
-.hpFullWidthBanner__title {
-  font-size: 45px;
-  font-family: "font sans serif black",Arial,sans-serif;
-  line-height: 1;
-  margin: 16px 0;
-  text-transform: uppercase;
-}
-
-.cta--bold {
-  font-size: 14px;
-  font-family: "font sans serif black",Arial,sans-serif;
-  line-height: 1;
-  margin: 19px;
-}
-
-
-@media (max-width: 1200px) {
-  .hpFullWidthBanner__text {
-    left: 425px;
-  } 
-}
-
-@media (max-width: 991px) {
-  .hpFullWidthBanner__text {
-    left: 299px;
-    top: 40px;
-    width: 417px;
-  }
-
-  .hpFullWidthBanner__preTitle {
-    font-size: 16px;
-    font-family: "font sans serif normal",Arial,sans-serif;
-    text-transform: uppercase;
-  }
-
-  .cta--bold {
-    margin: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .hpFullWidthBanner__text {
-    margin: 4px auto 0;
-    position: static;
-    width: 100%;
-  }
-
-  .hpFullWidthBanner__title {
-    font-family: "font sans serif black",Arial,sans-serif;
-    line-height: 1;
-    margin: -2px 0;
-    text-transform: uppercase;
-    font-size: 32px;
-  }
-
-  .cta--bold {
-      font-size: 14px;
-      font-family: "font sans serif black",Arial,sans-serif;
-      line-height: 1;
-      margin: 0px;
-  }
-
-  .hpFullWidthBanner__subTitle {
-    font-size: 18px;
-    margin-top: 8px;
-  }
-}
-</style>
-
 <div class="newHomepage__section">
-  <div class="hpFullWidthBanner">
-      <a data-tracking="2018_banner_with_cta" title="Jetzt Shoppen" class="hpFullWidthBanner__linkWrapper"  href="#LINKGOESHERE">
-      <div class="hpFullWidthBanner__imageWrapper">
-          <picture data-tracking="2018_banner_with_cta" class="hpFullWidthBanner__image" data-tracking="2018_banner_with_cta">
-          <source data-tracking="2018_banner_with_cta" srcset="https://navabi.imgix.net/img/index/2018/06/beachoutfit_teaser_d.jpg?w=1170&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/06/beachoutfit_teaser_d.jpg?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
-          <source data-tracking="2018_banner_with_cta" srcset="https://navabi.imgix.net/img/index/2018/06/beachoutfit_teaser_d.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/06/beachoutfit_teaser_d.jpg?w=1536&fit=clip&q=75 2x" media="(min-width: 768px)">
-          <source data-tracking="2018_banner_with_cta" srcset="https://navabi.imgix.net/img/index/2018/06/beachoutfit_teaser_m.jpg?w=768&fit=clip&q=75, https://navabi.imgix.net/img/index/2018/06/beachoutfit_teaser_m.jpg?w=1536&fit=clip&q=75 2x" media="(min-width: 0px)">
-          <img class="hpFullWidthBanner__image" alt="BIZ ZU - 30% AUF MARITIME STYLES" data-tracking="2018_banner_with_cta" srcset="https://navabi.imgix.net/img/index/2018/06/beachoutfit_teaser_d.jpg?w=768&fit=clip&q=75" alt="">
-          </picture>
-      </div>
-      <!-- 
-        You can move this on the right side by adding the -right class, 
-        like so:
-        <div class="hpFullWidthBanner__text -white">
-          Also you can make the text white by using
-        <div class="hpFullWidthBanner__text -white">
-          and of course you can make them both right and white
-        <div class="hpFullWidthBanner__text -right">
-      -->
-      <div class="hpFullWidthBanner__text -white">
-        <h4 data-tracking="2018_banner_with_cta" class="hpFullWidthBanner__preTitle">
-          Pretitle
-        </h4>
-        <h1 data-tracking="2018_banner_with_cta" class="hpFullWidthBanner__title">
-          Title
-        </h1>
-        <h4 data-tracking="2018_banner_with_cta" class="hpFullWidthBanner__subTitle">
-          Subtitle
-        </h4>
-        <button data-tracking="2018_banner_with_cta" class="cta cta--bold">
-          Button Text
-        </button>
-      </div>
-      </a>
-  </div>
-
   <!-- Here goes the product slider -->
   <div class="js-slick-productList hpProductListSlider">
       <div>
@@ -251,3 +123,30 @@
       </div>
   </div>
 </div>
+
+<script>
+var productSliderSettings = {
+	dots: false,
+	infinite: true,
+	speed: 300,
+	slidesToShow: 5,
+	slidesToScroll: 5,
+	draggable: true,
+	responsive: [
+	  {
+	    breakpoint: 991,
+	    settings: {
+	      slidesToShow: 4,
+	      slidesToScroll: 4
+	    }
+	  },
+	  {
+	    breakpoint: 600,
+	    settings: {
+	      slidesToShow: 2,
+	      slidesToScroll: 2
+	    }
+	  }
+	]
+};
+</script>
