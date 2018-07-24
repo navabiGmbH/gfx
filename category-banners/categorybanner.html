@@ -1,0 +1,152 @@
+<!-- 
+        ###################DATA TRACKING FOR THE FIELDS:############################
+        In the link always use 
+        data-task-category="category" with the name of the location, normally it will be category
+        data-task-name="category-banner-top" normally it will be the name of the campaign
+        data-tracking="50% shopen" it will be the name of the value.
+        The title=" -50 % shoppen >" is the value too.
+  -->
+<link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet" />
+<style>
+    /* Hacks - dont need to change */
+
+    .c-top-category-banner {
+        margin-top: 0 !important;
+    }
+
+    .newVisitBanner,
+    .segmentBanner,
+    .allVisitorsBanner {
+        display: none !important;
+    }
+
+    /* Top Banner */
+
+    /* Background of the top bannner */
+
+    .categoryTopHeader {
+        background: -webkit-linear-gradient(to right, #c1493a, #f5a273);
+        background: #f5a273;
+        background: linear-gradient(to right, #c1493a, #f5a273);
+        border-bottom: 1px solid #000;
+        height: 100%;
+        left: 0;
+        padding: 20px 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .categoryTopHeader__text {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* SIZE, Font and line height of H1 */
+
+    .categoryTopHeader__text h1 {
+        font-family: 'Prata', serif;
+        font-style: italic;
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    /* SIZE, Font and line height of H2 */
+
+    .categoryTopHeader__text h2 {
+        font-family: 'font sans serif black', Arial, sans-serif !important;
+        font-weight: 100;
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    /* SIZE, Font and line height of class textBold */
+
+    .categoryTopHeader__textBold {
+        font-family: 'font sans serif black', Arial, sans-serif !important;
+    }
+
+    .categoryTopHeader__cta {
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Size, color of the links */
+
+    .categoryTopHeader__cta--item {
+        align-items: center;
+        border-bottom: 1px solid #000;
+        cursor: pointer;
+        display: flex;
+        font-family: "font sans serif black", Arial, sans-serif;
+        font-size: 14px;
+        height: auto;
+        line-height: initial;
+        margin: 0 auto;
+        padding: 10px 0 !important;
+        text-transform: uppercase;
+        width: 80%;
+    }
+
+    .categoryTopHeader__cta--item h2 {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        .categoryTopHeader__cta {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .categoryTopHeader__cta--item:first-child {
+            margin: 0;
+        }
+        .categoryTopHeader__cta--item {
+            margin: 0 0 0 36px;
+        }
+    }
+</style>
+
+<!-- BANNER TOP -->
+<div class="categoryTopHeader">
+    <section class="categoryTopHeader__innner">
+        <header class="categoryTopHeader__text">
+            <h2 class="categoryTopHeader__textBold">
+                Sale Special:
+            </h2>
+            <h1>
+                bis zu 40 % reduziert
+            </h1>
+        </header>
+    </section>
+</div>
+
+
+<!-- CTAS -->
+<section class="categoryTopHeader__cta container">
+    <a href="/thema/bis-zu-50-prozent/" class="categoryTopHeader__cta--item col-md-4" title=" -50 % shoppen >" data-task-category="category"
+        data-task-name="category-banner-top" data-tracking="50% shopen">
+        <h2> -50 % shoppen > </h2>
+    </a>
+
+    <a href="/thema/bis-zu-50-prozent/" class="categoryTopHeader__cta--item col-md-4" title=" -50 % shoppen >" data-task-category="category"
+        data-task-name="category-banner-top" data-tracking="50% shopen">
+        <h2> -50 % shoppen > </h2>
+    </a>
+
+    <a href="/thema/bis-zu-50-prozent/" class="categoryTopHeader__cta--item col-md-4" title=" -50 % shoppen >" data-task-category="category"
+        data-task-name="category-banner-top" data-tracking="50% shopen">
+        <h2> -50 % shoppen > </h2>
+    </a>
+</section>
