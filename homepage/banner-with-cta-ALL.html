@@ -1,108 +1,134 @@
 <style>
-    .hpFullWidthBanner__text {
-      left: 661px;
-      top: 104px;
-      width: 378px;
-     
-      
+
+.hpFullWidthBanner__text {
+     left: 365px;
+    top: 120px;
+  width: 423px;
+}
+
+.hpFullWidthBanner__subTitle {
+    font-size: 21px;
+    font-family: "font sans serif normal",Arial,sans-serif;
+    line-height: 1;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.hpFullWidthBanner__preTitle {
+    font-size: 19px;
+    font-family: "font sans serif normal",Arial,sans-serif;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+.hpFullWidthBanner__title {
+    font-size: 45px;
+    font-family: "font sans serif black",Arial,sans-serif;
+    line-height: 1;
+    margin: 16px 0;
+    text-transform: uppercase;
+}
+
+
+.cta--bold {
+    font-size: 14px;
+    font-family: "font sans serif black",Arial,sans-serif;
+    line-height: 1;
+    margin: 19px;
+}
+
+
+@media (max-width: 1200px) {
+  .hpFullWidthBanner__text {
+        left: 265px;
+    top: 100px;
+ 
+  } 
+}
+
+@media (max-width: 991px) {
+      .hpFullWidthBanner__text {
+            left: 135px;
+    top: 50px;
+    width: 450px;
     }
-    
-    .hpFullWidthBanner__subTitle {
-        font-size: 21px;
-        font-family: "font sans serif normal",Arial,sans-serif;
-        line-height: 1;
-        text-transform: none;
-    }
-    
+
     .hpFullWidthBanner__preTitle {
-        font-size: 19px;
+        font-size: 16px;
         font-family: "font sans serif normal",Arial,sans-serif;
-        line-height: 4;
+        line-height: 2;
         text-transform: uppercase;
     }
-    
+
+    .hpFullWidthBanner__subTitle {
+        font-size: 18px;
+        line-height: 1.375;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .hpFullWidthBanner__text {
+        margin: 4px auto 0;
+        position: static;
+        width: 100%;
+    }
+
+    .hpFullWidthBanner__title {
+        font-family: "font sans serif black",Arial,sans-serif;
+        font-size: 32px;
+        line-height: 1;
+        margin: -2px 0 8px;
+        text-transform: uppercase;
+    }
     .cta--bold {
         font-size: 14px;
         font-family: "font sans serif black",Arial,sans-serif;
         line-height: 1;
-        margin: 19px;
+        margin: 0px;
+        margin-top: 12px;
     }
-    
-    
-    @media (max-width: 1200px) {
-      .hpFullWidthBanner__text {
-        left: 532px;
-        top: 69px;
-     
-      } 
-    }
+}
 
-    @media (max-width: 991px) {
-      .hpFullWidthBanner__text {
-        left: 412px;
-        top: 33px;
-        width: 293px;
-    }
-    
-    @media (max-width: 767px) {
-    
-      .hpFullWidthBanner__text {
-          margin: 4px auto 0;
-          position: static;
-      }
-      .hpFullWidthBanner__title {
-          font-family: "font sans serif black",Arial,sans-serif;
-          line-height: 1;
-          margin: -2px 0;
-          text-transform: uppercase;
-      }
-      .cta--bold {
-          font-size: 14px;
-          font-family: "font sans serif black",Arial,sans-serif;
-          line-height: 1;
-          margin: 0px;
-      
-      }
-    }
 
 </style>
-    
-    <div class="newHomepage__section">
-      <div class="hpFullWidthBanner">
-          <a data-tracking="2018_banner_with_cta" title="BIZ ZU - 30% AUF MARITIME STYLES" class="hpFullWidthBanner__linkWrapper"  href="{{ 2018_banner_with_cta__link }}">
-          <div class="hpFullWidthBanner__imageWrapper">
-              <picture data-tracking="2018_banner_with_cta" class="hpFullWidthBanner__image" data-tracking="2018_banner_with_cta">
-              <source data-tracking="2018_banner_with_cta" srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1170&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
-              <source data-tracking="2018_banner_with_cta" srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1536&fit=clip&q=75 2x" media="(min-width: 768px)">
-              <source data-tracking="2018_banner_with_cta" srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=1536&fit=clip&q=75 2x" media="(min-width: 0px)">
-              <img class="hpFullWidthBanner__image" alt="BIZ ZU - 30% AUF MARITIME STYLES" data-tracking="2018_banner_with_cta" srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75" alt="">
-              </picture>
-          </div>
-          <!-- 
-            You can move this on the right side by adding the -right class, 
-            like so:
-            <div class="hpFullWidthBanner__text -white">
-              Also you can make the text white by using
-            <div class="hpFullWidthBanner__text -white">
-              and of course you can make them both right and white
-            <div class="hpFullWidthBanner__text -right">
-          -->
-          <div class="hpFullWidthBanner__text -white">
-            <h4 data-tracking="2018_banner_with_cta" class="hpFullWidthBanner__preTitle">
-              {{ 2018_banner_with_cta__pretitle }}
-            </h4>
-            <h1 data-tracking="2018_banner_with_cta" class="hpFullWidthBanner__title">
-              {{ 2018_banner_with_cta__title }}
-            </h1>
-     
-            <h4 data-tracking="2018_banner_with_cta" class="hpFullWidthBanner__subTitle">
-              {{ 2018_banner_with_cta__subtitle }}
-            </h4>
-     
-            <button data-tracking="2018_banner_with_cta" class="cta cta--bold">
-              {{ 2018_banner_with_cta__ctatext }}
-            </button>
-          </div>
-          </a>
+
+<div class="newHomepage__section">
+  <div class="hpFullWidthBanner">
+      <a  title="{{ 2018_banner_with_cta__title }}" data-task-category="Main Teaser 3.1.0" data-task-name="~ st: {{ 2018_banner_with_cta__title }}  ~ b:  {{ 2018_banner_with_cta__pretitle }}" class="hpFullWidthBanner__linkWrapper"  href="{{ 2018_banner_with_cta__link }}">
+      <div class="hpFullWidthBanner__imageWrapper">
+          <picture  class="hpFullWidthBanner__image" >
+          <source  srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1170&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=2340&fit=clip&q=75 2x" media="(min-width: 991px)">
+          <source  srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=1536&fit=clip&q=75 2x" media="(min-width: 768px)">
+          <source  srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=768&fit=clip&q=75, https://navabi.imgix.net{{ 2018_banner_with_cta__image_mobile }}?w=1536&fit=clip&q=75 2x" media="(min-width: 0px)">
+          <img class="hpFullWidthBanner__image" alt="{{ 2018_banner_with_cta__title }}"  srcset="https://navabi.imgix.net{{ 2018_banner_with_cta__image_desktop }}?w=768&fit=clip&q=75" alt="">
+          </picture>
       </div>
-    </div>
+      <!-- 
+        You can move this on the right side by adding the -right class, 
+        like so:
+        <div class="hpFullWidthBanner__text -white">
+          Also you can make the text white by using
+        <div class="hpFullWidthBanner__text -white">
+          and of course you can make them both right and white
+        <div class="hpFullWidthBanner__text -right">
+      -->
+      <div class="hpFullWidthBanner__text">
+        <h4  class="hpFullWidthBanner__preTitle">
+          {{ 2018_banner_with_cta__pretitle }}
+        </h4>
+        <h1  class="hpFullWidthBanner__title">
+          {{ 2018_banner_with_cta__title }}
+        </h1>
+ 
+        <h4  class="hpFullWidthBanner__subTitle">
+          {{ 2018_banner_with_cta__subtitle }}
+        </h4>
+ 
+        <button  class="cta cta--bold">
+          {{ 2018_banner_with_cta__ctatext }}
+        </button>
+      </div>
+      </a>
+  </div>
+</div>
