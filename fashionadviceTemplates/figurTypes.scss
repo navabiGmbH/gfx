@@ -1,4 +1,3 @@
-
 .figurTypes{
     margin: 0 auto 20px;
     max-width: 1170px;
@@ -9,7 +8,7 @@
         display: flex;
         flex-wrap: wrap;
         @include mq-start-from(mobile){
-            padding:20px 60px;
+            padding: 20px 60px;
         }
     }
 
@@ -19,46 +18,8 @@
         text-align: left;
         width: 100%;
 
-
         .underline{
             text-decoration: underline;
-        }
-
-        &.flexBox{
-            display: flex;
-            flex-direction: column;
-            flex-flow: column wrap;
-            flex: 1 100%;
-            padding: 0;
-            @include mq-start-from(mobile){
-                background: $white-smoke;
-                box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
-                flex-direction: row;
-                width: 100%;
-            }
-
-            h3{
-                @include mq-start-from(mobile){
-                    @include font-weight(bold);
-                    border-bottom: 0;
-                    font-size: get-font-size(default, desktop);
-                    min-width: 200px;
-                    text-transform: none;
-                }
-            }
-        }
-
-        &.textLeft{
-            text-align: left;
-        }
-
-        &.blueBg{
-            background: get-color(greys, very-light);
-        }
-
-        &.boxShadow{
-            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
-            margin: 0 0 $gap;
         }
 
         &--title{
@@ -77,81 +38,6 @@
 
             @include mq-start-from(tablet){
                 min-width: 25%;
-            }
-        }
-
-        &--subtitle{
-            font-size: get-font-size(default, desktop);
-            text-transform: uppercase;
-            @include font-weight(bold);
-        }
-
-        &--minititle{
-            border-bottom: 1px solid get-color(dark);
-            font-size: get-font-size(default, desktop);
-            padding: 10px;
-            @include font-weight(bold);
-            text-transform: uppercase;
-        }
-
-        &--list{
-            position: relative;
-            @include mq-start-from(mobile){
-                overflow-x: auto;
-                overflow-y: hidden;
-            }
-
-            ul{
-                -webkit-overflow-scrolling: touch;
-                background: $white-smoke;
-                box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
-                list-style: none;
-                margin: 0;
-                overflow-x: auto;
-                overflow-y: hidden;
-                padding: 10px;
-                text-align: center;
-                white-space: nowrap;
-                @include mq-start-from(mobile){
-                    box-shadow: none;
-                }
-            }
-            li{
-                display: inline-block;
-                list-style-type: none;
-                font-size: get-font-size(default, desktop);
-                margin: 0 5px;
-                padding: 0;
-                position: relative;
-                vertical-align: top;
-
-                a{
-                    text-decoration: none;
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                }
-            }
-            &:before{
-                left: 0;
-            }
-            &:after{
-                right: 0;
-                transform: scaleX(-1);
-            }
-            &:before, &:after{
-                display: block;
-                height: 100%;
-                width: 12px;
-                content: "";
-                position: absolute;
-                top: 0;
-                z-index: 100;
-                pointer-events: none;
-                background-image: linear-gradient(90deg,#ddd,hsla(0,0%,100%,0));
-                @include mq-start-from(mobile){
-                    background-image: none;
-                }
             }
         }
 
@@ -231,10 +117,12 @@
                     @include font-weight(bold);
                 }
             }
+
             &.order1{
                 order: 1;
                 flex: 1 35%;
             }
+
             &.order2{
                 display: flex;
                 flex: 1 65%;
@@ -245,6 +133,7 @@
             &.order1{
                 flex: 1 25%;
             }
+
             &.order2{
                 flex: 1 75%;
             }
