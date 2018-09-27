@@ -1,99 +1,131 @@
-<div class="quiz container">
-  <div class="quiz__step1 is-hidden" data-step="1">
-    <div class="quiz__content">
-      <div class="quiz__title">
-        Welcher Figurtyp sind Sie?
+<style>
+  .quiz {
+      background: #F4F2F3 url() no-repeat right top / cover;
+  }
+
+  @media (max-width: 768px) {
+      .quiz {
+          background: #F4F2F3;
+      }
+  }
+</style>
+<div class="container">
+  <div class="quiz">
+      <div class="quiz__innerWrapper">
+          <div class="quiz__step quiz__step--1 quiz__step1 is-hidden" data-step="1">
+              <div class="quiz__content">
+                  <div class="quiz__title">
+                      Welcher Figurtyp sind Sie?
+                  </div>
+                  <div class="quiz__ctas quiz__ctas--start">
+                      <button class="cta cta--bold cta--large" id="button-step-1">
+                          Jetzt in Zwei Schritten herausfinden
+                      </button>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="quiz__startCta">
-        <button class="cta cta--bold cta--large" id="button-step-1">
-          Jetzt in Zwei Schritten herausfinden
-        </button>
+      <div class="quiz__innerWrapper">
+          <div class="quiz__step quiz__step--2 is-hidden" data-step="2">
+              <div class="quiz__page">Schritt 1 von 2</div>
+              <div class="quiz__content">
+                  <div class="quiz__title">
+                  Finden Sie Ihren Figurtyp
+                  </div>
+                  <div class="quiz__question">
+                  Welche der folgenden Assagen trifft am ehesten auf Sie zu?
+                  </div>
+                  <div class="quiz__answers js-quiz-a defaultRadio">
+                      <ul class="defaultRadio">
+                          <li class="quiz__answersItem">
+                          <input type="radio" class="defaultRadio__input quiz__radio" name="quiz-a" value="a" id="quiz-a1">
+                          <label for="quiz-a1" class="quiz__label defaultRadio__label">Meine Schultern sind schmaler als meine Hüfte</label>
+                          </li>
+                          <li class="quiz__answersItem">
+                          <input type="radio" class="quiz__radio defaultRadio__input" name="quiz-a" value="b" id="quiz-a2">
+                          <label for="quiz-a2" class="quiz__label defaultRadio__label">Meine Schultern sind breiter als meine Hüfte</label>
+                          </li>
+                          <li class="quiz__answersItem">
+                          <input type="radio" class="quiz__radio defaultRadio__input" name="quiz-a" value="c" id="quiz-a3">
+                          <label for="quiz-a3" class="quiz__label defaultRadio__label">Meine Schultern sind genauso breit wie meine Hüfte</label>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="quiz__ctas quiz__ctas--alignRight">
+                      <button id="button-step-2" class="cta cta--bold cta--large">
+                          Weiter
+                      </button>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-  </div>
-  <div class="quiz__step2 is-hidden" data-step="2">
-    <div class="quiz__content">
-      <div class="quiz__title">
-        Finden Sie Ihren Figurtyp
+      <div class="quiz__innerWrapper">
+          <div class="quiz__step quiz__step--3 is-hidden" data-step="3">
+              <div class="quiz__page">Schritt 2 von 2</div>
+              <div class="quiz__content">
+                  <div class="quiz__title">
+                  Finden Sie Ihren Figurtyp
+                  </div>
+                  <div class="quiz__question">
+                  Welche der folgenden Assagen trifft am ehesten auf Sie zu?
+                  </div>
+                  <div class="quiz__answers js-quiz-b">
+                      <ul class="defaultRadio">
+                          <li class="quiz__answersItem">
+                          <input type="radio" class="quiz__radio defaultRadio__input" name="quiz-b" value="a" id="quiz-b1">
+                          <label class="quiz__label defaultRadio__label" for="quiz-b1">Meine Taille ist schmaler als meine Hüfte</label>
+                          </li>
+                          <li class="quiz__answersItem">
+                          <input type="radio" class="quiz__radio defaultRadio__input" name="quiz-b" value="b" id="quiz-b2">
+                          <label class="quiz__label defaultRadio__label" for="quiz-b2">Meine Taille ist breiter als meine Hüfte</label>
+                          </li>
+                          <li class="quiz__answersItem">
+                          <input type="radio" class="quiz__radio defaultRadio__input" name="quiz-b" value="c" id="quiz-b3">
+                          <label class="quiz__label defaultRadio__label" for="quiz-b3">Meine Taille ist genauso breit wie meine Hüfte</label>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="quiz__ctas">
+                      <button id="button-back-3" class="cta cta--onlyText">
+                          < Zurück
+                      </button>
+                      <button id="button-step-3" class="cta cta--bold cta--large">
+                          Ergebnis Ansehen
+                      </button>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="quiz__question">
-        Welche der folgenden Assagen trifft am ehesten auf Sie zu?
+      <div class="quiz__innerWrapper">
+          <div class="quiz__step quiz__step--4 quiz__step--result is-hidden" data-step="4">
+          <div class="quiz__contentResult">
+              <div class="quiz__contentResultImage">
+                  <img id="quiz-result-image" src="">
+              </div>
+              <div class="quiz__contentResultText">
+                  <div class="quiz__contentResultTitle" id="quiz-result-title"></div>
+                  <div class="quiz__contentResultDescription" id="quiz-result-text"></div>
+                  <div class="quiz__ctas quiz__ctas--alignLeft">
+                      <a href="#" class="cta cta--large cta--bold" id="quiz-result-link"></a>
+                  </div>
+                  <div class="quiz__ctas">
+                      <button id="button-back-4" class="cta cta--onlyText">
+                          < Zurück
+                      </button>
+                      <button class="cta cta--large cta--alt" id="quiz-result-restart">
+                          TEST NEU STARTEN
+                      </button>
+                  </div>
+              </div>
+          </div>
+          </div>
       </div>
-      <div class="quiz__answers js-quiz-a">
-        <ul>
-          <li>
-            <input type="radio" class="quiz__radio" name="quiz-a" value="a" id="quiz-a1">
-            <label for="quiz-a1">Meine Schultern sind schmaler als meine Hüfte</label>
-          </li>
-          <li>
-            <input type="radio" class="quiz__radio" name="quiz-a" value="b" id="quiz-a2">
-            <label for="quiz-a2">Meine Schultern sind breiter als meine Hüfte</label>
-          </li>
-          <li>
-            <input type="radio" class="quiz__radio" name="quiz-a" value="c" id="quiz-a3">
-            <label for="quiz-a3">Meine Schultern sind genauso breit wie meine Hüfte</label>
-          </li>
-        </ul>
+      <div class="quiz__errorMessage is-hidden" id="js-quiz-error">
+          Please choose an option
       </div>
-      <div class="quiz__ctas">
-        <button id="button-step-2" class="cta cta--bold cta--large">
-          Weiter
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="quiz__step3 is-hidden" data-step="3">
-    <div class="quiz__content">
-      <div class="quiz__title">
-        Finden Sie Ihren Figurtyp
-      </div>
-      <div class="quiz__question">
-        Welche der folgenden Assagen trifft am ehesten auf Sie zu?
-      </div>
-      <div class="quiz__answers js-quiz-b">
-        <ul>
-          <li>
-            <input type="radio" class="quiz__radio" name="quiz-b" value="a" id="quiz-b1">
-            <label for="quiz-b1">Meine Taille ist schmaler als meine Hüfte</label>
-          </li>
-          <li>
-            <input type="radio" class="quiz__radio" name="quiz-b" value="b" id="quiz-b2">
-            <label for="quiz-b2">Meine Taille ist breiter als meine Hüfte</label>
-          </li>
-          <li>
-            <input type="radio" class="quiz__radio" name="quiz-b" value="c" id="quiz-b3">
-            <label for="quiz-b3">Meine Taille ist genauso breit wie meine Hüfte</label>
-          </li>
-        </ul>
-      </div>
-      <div class="quiz__ctas">
-        <button id="button-step-3" class="cta cta--bold cta--large">
-          Ergebnis Ansehen
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="quiz__result is-hidden" data-step="4">
-    <div class="quiz__contentResult">
-      <div class="quiz__contentResultImage">
-        <img id="quiz-result-image" src="">
-      </div>
-      <div class="quiz__contentResultText">
-        <div class="quiz__contentResultTitle" id="quiz-result-title">Sie sind ein V-Typ</div>
-        <div class="quiz__contentResultText" id="quiz-result-text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea accusamus impedit officia
-          eligendi repellendus
-          suscipit temporibus sit necessitatibus placeat fugiat!
-        </div>
-        <div class="quiz__contentResultCTA">
-          <a href="#" class="cta cta--large cta--bold" id="quiz-result-link">
-            V-TYP Shoppen
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
+
 <script>
   var quizModule = (function () {
     var publicAPI = {};
@@ -101,7 +133,7 @@
     var resultContent = {
       a: {
         image: "https://navabi.imgix.net/img/filterset/07_Modeberatung/2016/fashionadvice/02/A2-transp.png",
-        itle: "SIE SIND EIN A-TYP",
+        title: "SIE SIND EIN A-TYP",
         text: "Jetzt kennen Sie Ihren Figurtypen und es ist an der Zeit, ihn auch zur Geltung zu bringen. Unsere Stylistin hat nur für Sie sorgfältig die perfekten Stücke zusammengestellt, die am besten zu Ihrer Figur passen und in denen Sie sich rundherum wohlfühlen.",
         link: "/modeberatung/figurtyp/a-typ/",
         linkText: "A-TYP-SHOPPEN"
@@ -140,12 +172,16 @@
       buttonStep1: $('#button-step-1'),
       buttonStep2: $('#button-step-2'),
       buttonStep3: $('#button-step-3'),
+      buttonBack3: $('#button-back-3'),
+      buttonBack4: $('#button-back-4'),
+      buttonRestart: $('#quiz-result-restart'),
       quiz1: $('.js-quiz-a'),
       quiz2: $('.js-quiz-b'),
       quizResultImage: $('#quiz-result-image'),
       quizResultTitle: $('#quiz-result-title'),
       quizResultText: $('#quiz-result-text'),
-      quizResultLink: $('#quiz-result-link')
+      quizResultLink: $('#quiz-result-link'),
+      quizErrorMessage: $('#js-quiz-error'),
     }
 
     var currentStep = 0;
@@ -166,9 +202,46 @@
       return value1 + value2;
     }
 
+    var toggleErrorMessage = function(value){
+        if (value === 'show') {
+          UI.quizErrorMessage.removeClass('is-hidden')
+        } else {
+          UI.quizErrorMessage.addClass('is-hidden')
+        }
+    }
+
+    var isValuePresent = function(quiz){                
+      if ((quiz === 'a') && (UI.quiz1.find('input:checked').val())) {
+          toggleErrorMessage('hide');
+          return true;
+      } else if ((quiz === 'b') && (UI.quiz2.find('input:checked').val())) {
+          toggleErrorMessage('hide');
+          return true;
+      } else {
+          toggleErrorMessage('show');
+          return false;
+      }
+    }
+
+    var cleanFields = function(){
+      UI.quiz1.find('input').attr('checked', false);
+      UI.quiz2.find('input').attr('checked', false);
+    }
+
     var advanceStep = function () {
       currentStep++;
       showStep(currentStep);
+    }
+
+    var backStep = function () {
+      currentStep--;
+      showStep(currentStep);
+    }
+
+    var restart = function() {
+        cleanFields();
+        currentStep = 1;
+        showStep(currentStep);
     }
 
     var buildResultHTML = function (type) {
@@ -214,14 +287,30 @@
       advanceStep();
 
       UI.buttonStep1.on('click', function () {
-        advanceStep()
+          advanceStep()
       })
       UI.buttonStep2.on('click', function () {
-        advanceStep()
+          if (isValuePresent('a')) {
+              advanceStep()
+          }
       })
       UI.buttonStep3.on('click', function () {
-        prepareAnswer();
-        advanceStep();
+          if (isValuePresent('b')) {
+              prepareAnswer();
+              advanceStep();
+          }
+      })
+
+      UI.buttonBack3.on('click', function(){
+          backStep();
+      })
+
+      UI.buttonBack4.on('click', function(){
+          backStep();
+      })
+
+      UI.buttonRestart.on('click', function(){
+          restart();
       })
     };
 
@@ -230,4 +319,3 @@
 
   quizModule.init();
 </script>
-</div>
