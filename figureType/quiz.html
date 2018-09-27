@@ -1,0 +1,238 @@
+<style>
+  .is-hidden {
+            display: none;
+        }
+    </style>
+<div class="quiz container">
+  <div class="quiz__step1 is-hidden" data-step="1">
+    <div class="quiz__content">
+      <div class="quiz__title">
+        Welcher Figurtyp sind Sie?
+      </div>
+      <div class="quiz__startCta">
+        <button class="cta cta--bold cta--large" id="button-step-1">
+          Jetzt in Zwei Schritten herausfinden
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="quiz__step2 is-hidden" data-step="2">
+    <div class="quiz__content">
+      <div class="quiz__title">
+        Finden Sie Ihren Figurtyp
+      </div>
+      <div class="quiz__question">
+        Welche der folgenden Assagen trifft am ehesten auf Sie zu?
+      </div>
+      <div class="quiz__answers js-quiz-a">
+        <ul>
+          <li>
+            <input type="radio" class="quiz__radio" name="quiz-a" value="a" id="quiz-a1">
+            <label for="quiz-a1">Meine Schultern sind schmaler als meine Hüfte</label>
+          </li>
+          <li>
+            <input type="radio" class="quiz__radio" name="quiz-a" value="b" id="quiz-a2">
+            <label for="quiz-a2">Meine Schultern sind breiter als meine Hüfte</label>
+          </li>
+          <li>
+            <input type="radio" class="quiz__radio" name="quiz-a" value="c" id="quiz-a3">
+            <label for="quiz-a3">Meine Schultern sind genauso breit wie meine Hüfte</label>
+          </li>
+        </ul>
+      </div>
+      <div class="quiz__ctas">
+        <button id="button-step-2" class="cta cta--bold cta--large">
+          Weiter
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="quiz__step3 is-hidden" data-step="3">
+    <div class="quiz__content">
+      <div class="quiz__title">
+        Finden Sie Ihren Figurtyp
+      </div>
+      <div class="quiz__question">
+        Welche der folgenden Assagen trifft am ehesten auf Sie zu?
+      </div>
+      <div class="quiz__answers js-quiz-b">
+        <ul>
+          <li>
+            <input type="radio" class="quiz__radio" name="quiz-b" value="a" id="quiz-b1">
+            <label for="quiz-b1">Meine Taille ist schmaler als meine Hüfte</label>
+          </li>
+          <li>
+            <input type="radio" class="quiz__radio" name="quiz-b" value="b" id="quiz-b2">
+            <label for="quiz-b2">Meine Taille ist breiter als meine Hüfte</label>
+          </li>
+          <li>
+            <input type="radio" class="quiz__radio" name="quiz-b" value="c" id="quiz-b3">
+            <label for="quiz-b3">Meine Taille ist genauso breit wie meine Hüfte</label>
+          </li>
+        </ul>
+      </div>
+      <div class="quiz__ctas">
+        <button id="button-step-3" class="cta cta--bold cta--large">
+          Ergebnis Ansehen
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="quiz__result is-hidden" data-step="4">
+    <div class="quiz__contentResult">
+      <div class="quiz__contentResultImage">
+        <img id="quiz-result-image" src="">
+      </div>
+      <div class="quiz__contentResultText">
+        <div class="quiz__contentResultTitle" id="quiz-result-title">Sie sind ein V-Typ</div>
+        <div class="quiz__contentResultText" id="quiz-result-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea accusamus impedit officia
+          eligendi repellendus
+          suscipit temporibus sit necessitatibus placeat fugiat!
+        </div>
+        <div class="quiz__contentResultCTA">
+          <a href="#" class="cta cta--large cta--bold" id="quiz-result-link">
+            V-TYP Shoppen
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var quizModule = (function () {
+    var publicAPI = {};
+
+    var resultContent = {
+      a: {
+        image: "https://navabi.imgix.net/img/filterset/07_Modeberatung/2016/fashionadvice/02/A2-transp.png",
+        itle: "SIE SIND EIN A-TYP",
+        text: "Jetzt kennen Sie Ihren Figurtypen und es ist an der Zeit, ihn auch zur Geltung zu bringen. Unsere Stylistin hat nur für Sie sorgfältig die perfekten Stücke zusammengestellt, die am besten zu Ihrer Figur passen und in denen Sie sich rundherum wohlfühlen.",
+        link: "/modeberatung/figurtyp/a-typ/",
+        linkText: "A-TYP-SHOPPEN"
+      },
+      o: {
+        image: "https://navabi.imgix.net/img/filterset/07_Modeberatung/2016/fashionadvice/02/O2-transp.png",
+        title: "SIE SIND EIN O-TYP",
+        text: "Jetzt kennen Sie Ihren Figurtypen und es ist an der Zeit, ihn auch zur Geltung zu bringen. Unsere Stylistin hat nur für Sie sorgfältig die perfekten Stücke zusammengestellt, die am besten zu Ihrer Figur passen und in denen Sie sich rundherum wohlfühlen.",
+        link: "/modeberatung/figurtyp/o-typ/",
+        linkText: "O-TYP-SHOPPEN"
+      },
+      v: {
+        image: "https://navabi.imgix.net/img/filterset/07_Modeberatung/2016/fashionadvice/02/V2-transp.png",
+        title: "SIE SIND EIN V-TYP",
+        text: "Jetzt kennen Sie Ihren Figurtypen und es ist an der Zeit, ihn auch zur Geltung zu bringen. Unsere Stylistin hat nur für Sie sorgfältig die perfekten Stücke zusammengestellt, die am besten zu Ihrer Figur passen und in denen Sie sich rundherum wohlfühlen.",
+        link: "/modeberatung/figurtyp/v-typ/",
+        linkText: "V-TYP-SHOPPEN"
+      },
+      x: {
+        image: "https://navabi.imgix.net/img/filterset/07_Modeberatung/2016/fashionadvice/02/X2-transp.png",
+        title: "SIE SIND EIN X-TYP",
+        text: "Jetzt kennen Sie Ihren Figurtypen und es ist an der Zeit, ihn auch zur Geltung zu bringen. Unsere Stylistin hat nur für Sie sorgfältig die perfekten Stücke zusammengestellt, die am besten zu Ihrer Figur passen und in denen Sie sich rundherum wohlfühlen.",
+        link: "/modeberatung/figurtyp/x-typ/",
+        linkText: "X-TYP-SHOPPEN"
+      },
+      h: {
+        image: "https://navabi.imgix.net/img/filterset/07_Modeberatung/2016/fashionadvice/02/H2-transp.png",
+        title: "SIE SIND EIN H-TYP",
+        text: "Jetzt kennen Sie Ihren Figurtypen und es ist an der Zeit, ihn auch zur Geltung zu bringen. Unsere Stylistin hat nur für Sie sorgfältig die perfekten Stücke zusammengestellt, die am besten zu Ihrer Figur passen und in denen Sie sich rundherum wohlfühlen.",
+        link: "/modeberatung/figurtyp/h-typ/",
+        linkText: "H-TYP-SHOPPEN"
+      }
+    }
+
+    var UI = {
+      buttonStep1: $('#button-step-1'),
+      buttonStep2: $('#button-step-2'),
+      buttonStep3: $('#button-step-3'),
+      quiz1: $('.js-quiz-a'),
+      quiz2: $('.js-quiz-b'),
+      quizResultImage: $('#quiz-result-image'),
+      quizResultTitle: $('#quiz-result-title'),
+      quizResultText: $('#quiz-result-text'),
+      quizResultLink: $('#quiz-result-link')
+    }
+
+    var currentStep = 0;
+
+    var showStep = function (step) {
+      var allSteps = $('[data-step]');
+      var stepToShow = $('[data-step="' + step + '"]');
+      allSteps.addClass('is-hidden');
+      stepToShow.removeClass('is-hidden');
+    }
+
+    var getAnswer = function () {
+      // get value from quiz 1
+      var value1 = UI.quiz1.find('input:checked').val();
+      // get value from quiz 2
+      var value2 = UI.quiz2.find('input:checked').val();
+
+      return value1 + value2;
+    }
+
+    var advanceStep = function () {
+      currentStep++;
+      showStep(currentStep);
+    }
+
+    var buildResultHTML = function (type) {
+      UI.quizResultTitle.html(resultContent[type].title);
+      UI.quizResultText.html(resultContent[type].text);
+      UI.quizResultImage.attr('src', resultContent[type].image);
+      UI.quizResultLink.attr('href', resultContent[type].link);
+      UI.quizResultLink.html(resultContent[type].linkText);
+    }
+
+    var prepareAnswer = function () {
+      var answers = getAnswer();
+      var result;
+
+      switch (answers) {
+        case 'aa':
+        case 'ac':
+          result = 'a';
+          break;
+        case 'ab':
+        case 'cb':
+          result = 'o';
+          break;
+        case 'ba':
+        case 'bb':
+        case 'bc':
+          result = 'v';
+          break;
+        case 'ca':
+          result = 'x';
+          break;
+        case 'cc':
+          result = 'h';
+          break;
+        default:
+          break;
+      }
+
+      buildResultHTML(result);
+    }
+
+    publicAPI.init = function () {
+      advanceStep();
+
+      UI.buttonStep1.on('click', function () {
+        advanceStep()
+      })
+      UI.buttonStep2.on('click', function () {
+        advanceStep()
+      })
+      UI.buttonStep3.on('click', function () {
+        prepareAnswer();
+        advanceStep();
+      })
+    };
+
+    return publicAPI;
+  })()
+
+  quizModule.init();
+</script>
+</div>
