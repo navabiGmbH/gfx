@@ -4,6 +4,124 @@
   document.createElement( "picture" );
 </script>
 
+<style>
+  .categoryFullWidthBanner {
+    min-height: 200px !important;
+  }
+
+  @media screen and (min-width: 1600px) {
+    .categoryFullWidthBanner {
+      min-height: 300px !important;
+    }
+  }
+
+  .categoryFullWidthBanner__text h1 {
+    font-family: 'Prata', serif;
+    font-style: italic;
+    font-size: 52px;
+  }
+  .categoryFullWidthBanner__text h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.375;
+  }
+  
+  .categoryFullWidthBanner__cta {
+    margin-top: 16px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .categoryFullWidthBanner__text {
+      padding: 24px;
+    }
+    .categoryFullWidthBanner__text h1 {
+      font-size: 32px;
+    }
+    .categoryFullWidthBanner__text h2 {
+      font-size: 14px;
+      padding: 4px 16px;
+    }
+    .categoryFullWidthBanner__logoImage {
+      width: 275px;
+      margin: 20px auto;
+    }
+  }
+ 
+  @media screen and (max-width: 767px) {
+    .categoryFullWidthBanner__background {
+      height: 200px;
+      margin-top: 20px;
+      position: static;
+    }
+  }
+
+  .categoryFullWidthBanner__background {
+    /* Image for mobile 1x */
+    background: url(https://navabi.imgix.net/img/filterset/2018-category/dresses/dresses-mobile.jpg?w=768) no-repeat center top / cover;
+  }
+  
+  @media
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      .categoryFullWidthBanner__background {
+          /* Image for mobile 2x */
+          background: url(https://navabi.imgix.net/img/filterset/2018-category/dresses/dresses-mobile.jpg?w=1536) no-repeat center top / cover;
+      }
+  }
+  
+  @media screen and (min-width: 768px) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop 1x */
+          background: url(https://navabi.imgix.net/img/filterset/2018-category/dresses/dresses-desktop.jpg?w=1200) no-repeat left top / cover;
+      }
+  }
+  
+  @media
+    screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 768px) and (min-resolution: 192dpi),
+    screen and (min-width: 768px) and (min-resolution: 2dppx) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop large and 2x */
+          background: url(https://navabi.imgix.net/img/filterset/2018-category/dresses/dresses-desktop.jpg?w=2400) no-repeat left top / cover;
+      }
+  }
+  @media screen and (min-width:1200px) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop large 1x */
+          background: url(https://navabi.imgix.net/img/filterset/2018-category/dresses/dresses-desktop.jpg?w=1920) no-repeat center top / cover;
+      }
+  }
+  
+  @media
+    screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 1200px) and (min-resolution: 192dpi),
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop large 2x */
+          background: url(https://navabi.imgix.net/img/filterset/2018-category/dresses/dresses-desktop.jpg?w=3840) no-repeat center top / cover;
+      }
+  }
+  
+  @media screen and (min-width:1920px) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop very large 1x */
+          background: url(https://navabi.imgix.net/img/filterset/2018-category/dresses/dresses-desktop.jpg?w=2560) no-repeat center top / cover;
+      }
+  }
+  
+  @media
+    screen and (min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 1920px) and (min-resolution: 192dpi),
+    screen and (min-width: 1920px) and (min-resolution: 2dppx) {
+      .categoryFullWidthBanner__background {
+          /* Image for desktop very large 2x */
+          background: url(https://navabi.imgix.net/img/filterset/2018-category/dresses/dresses-desktop.jpg?w=6120) no-repeat center top / cover;
+      }
+  }
+</style>
+
 <div class="categoryFullWidthBanner">
   <div class="categoryFullWidthBanner__background"></div>
   <div class="categoryFullWidthBanner__text">
@@ -14,7 +132,7 @@
     	Kein Kleidungsstück ist so wandelbar, persönlich und so von Frauen geliebt wie das Kleid
     </h2>
     <h3>
-      <a class="cta" href="/sonderangebote.html?category[]=kleider">Jetzt Sale-Kleider shoppen &gt;</a>
+      <a class="categoryFullWidthBanner__cta cta" href="/sonderangebote.html?category[]=kleider">Jetzt Sale-Kleider shoppen &gt;</a>
     </h3>
   </div>
 </div>
