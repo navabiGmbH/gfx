@@ -1,90 +1,146 @@
 <div data-mobile-promotext="mobile-promotext" class="allVisitorsBanner">
-        <style>
-          .has-white-text a,
-          .has-white-text a:hover {
-            color: #fff;
-          }
-          .banner2018__contentText label {
-            cursor: pointer;
-          }
-          .banner2018__triggerLabelText {
-            text-decoration: underline;
-            font-weight: normal;
-            font-size: 12px;
-            margin-left: 6px;
-          }
-          .banner2018__contentText {
-            font-size: 23px;
-          }
-          #banner2018__coupon {
-            border: none;
-            width: 100px;
-            height: auto;
-          }
-        </style>
-        <!--The first div it is the main div, where you can choose the background color-->
-        <div
-          class="bannerWrapper bannerWrapper--fullwidth bannerWrapper--banner2018"
-          style="background: #981a32; text-align: center; padding:6px 0;"
-        >
-          <!-- use class="has-white-text" in the div like: <div class="has-white-text"> if you want white text, remove it if you do not, the default colo is BLACK -->
-          <div class="has-white-text">
-            <div class="banner2018__container">
-              <input
-                type="checkbox"
-                class="banner2018__trigger"
-                id="banner2018-trigger"
-                value=""
-              />
-              <div class="banner2018__contentWrapper">
-                <div class="banner2018__contentText">
-                  <a
-                    href="/sonderangebote.html?category[]=oberteile&sale=true"
-                    data-task-category="boden banner"
-                    data-task-name="boden banner"
-                    data-tracking="sale_extra_15_off"
-                  >
-                    <span class="banner2018__bold"> Extra -15 % auf Oberteile
-                      </span>
-                      <span class="banner2018__normal"> mit dem Code*
-                      </span>
-                  </a>
-                  <input
-                    class="banner2018__coupon"
-                    id="banner2018__coupon"
-                    type="text"
-                    value="TOPS15"
-                    readonly="readonly"
-                  />
-                  <label for="banner2018-trigger">
-                    <span
-                      class="banner2018__triggerLabelText banner2018__triggerLabelText--more"
-                    >
-                      Mehr Details
-                    </span>
-                    <span
-                      class="banner2018__triggerLabelText banner2018__triggerLabelText--less"
-                    >
-                      Weniger
-                    </span>
-                  </label>
+  <style>
+    .has-white-text a,
+    .has-white-text a:hover {
+      color: #fff;
+    }
+    .banner2018__contentText label {
+      cursor: pointer;
+    }
+    .banner2018__triggerLabelText {
+      text-decoration: underline;
+      font-weight: normal;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+    .banner2018__contentText {
+      font-size: 23px;
+    }
+    #banner2018__coupon {
+      border: none;
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+      text-align: center;
+    }
+    /* MODAL DIALOG*/
+    #Coupon {
+      left: auto;
+      bottom: auto;
+      background: #fff;
+      position: fixed;
+      width: 200px !important;
+      height: auto;
+      border: none;
+      top: 5%;
+      right: 5%;
+      z-index: 9999 !important;
+      box-shadow: 1px 1px 3px #c3c3c3;
+      min-height: auto;
+      padding: 10px;
+    }
+    @media (max-width: 767px) {
+      #Coupon {
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+
+    #Coupon .modal-dialog {
+      background: #fff;
+      color: #000;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+  <!--The first div it is the main div, where you can choose the background color-->
+  <div
+    class="bannerWrapper bannerWrapper--fullwidth bannerWrapper--banner2018"
+    style="background: #981a32; text-align: center; padding:6px 0;"
+  >
+    <!-- use class="has-white-text" in the div like: <div class="has-white-text"> if you want white text, remove it if you do not, the default colo is BLACK -->
+    <div class="has-white-text">
+      <div class="banner2018__container">
+        <input
+          type="checkbox"
+          class="banner2018__trigger"
+          id="banner2018-trigger"
+          value=""
+        />
+        <div class="banner2018__contentWrapper">
+          <div class="banner2018__contentText">
+            <a
+              href="/sonderangebote.html?category[]=oberteile&sale=true"
+              data-task-category="boden banner"
+              data-task-name="boden banner"
+              data-tracking="sale_extra_15_off"
+            >
+              <span class="banner2018__bold"> Extra -15 % auf Oberteile </span>
+              <span class="banner2018__normal"> mit dem Code* </span>
+            </a>
+            <input
+              class="banner2018__coupon"
+              id="banner2018__coupon"
+              type="text"
+              value="TOPS15"
+              readonly="readonly"
+              data-toggle="modal"
+              data-target="#Coupon"
+            />
+            <label for="banner2018-trigger">
+              <span
+                class="banner2018__triggerLabelText banner2018__triggerLabelText--more"
+              >
+                Mehr Details
+              </span>
+              <span
+                class="banner2018__triggerLabelText banner2018__triggerLabelText--less"
+              >
+                Weniger
+              </span>
+            </label>
+          </div>
+          <div class="banner2018__additional">
+            <span class="banner2018__small">
+              *Bis zum 31.01.2019, 23:59 Uhr, und für die Artikel auf dieser
+              verlinkten und den folgenden Seiten gültig. Nicht mit anderen
+              Gutschein-Codes kombinierbar.
+            </span>
+          </div>
+
+          <!-- Modal -->
+
+          <div
+            id="Coupon"
+            class="fade modal-dialog  userModal--overview js-userModal"
+            role="dialog"
+          >
+            <span class="userModal__close" data-dismiss="modal">×</span>
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <strong>Der Gutscheincode</strong>
                 </div>
-                <div class="banner2018__additional">
-                  <span class="banner2018__small">
-                    *Gültig bis zum 30.01.2019, 23:59 Uhr, und nur für die Artikel auf
-                    dieser verlinkten und den folgenden Seiten. Die angegebenen Preise
-                    sind die Endpreise.
-                  </span>
+                <div class="modal-body">
+                  <strong>wurde efolgreich kopiert.</strong>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <script>
-        document.getElementById("banner2018__coupon").onclick = function() {
-          this.select();
-          document.execCommand("copy");
-          alert("TOPS15");
-        };
-      </script>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById("banner2018__coupon").onclick = function() {
+    this.select();
+    document.execCommand("copy");
+    setTimeout(function() {
+      jQuery("#Coupon").modal("hide");
+    }, 2000);
+  };
+</script>
