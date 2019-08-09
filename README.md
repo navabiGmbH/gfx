@@ -1,4 +1,4 @@
 # HTML to be used by Graphics
 
-These are the HTML snippets that will hopefully be soon used by our graphics department
+These are the HTML snippets not used by our graphics department (but hopefully soon)
 Juhu
